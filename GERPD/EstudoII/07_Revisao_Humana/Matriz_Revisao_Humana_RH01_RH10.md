@@ -1,0 +1,14 @@
+# Matriz de Revisão Humana — RH-01 a RH-10
+
+| ID | Natureza predominante | Ajuste humano consolidado |
+|---|---|---|
+| RH-01 | Omissão / cobertura | Complementar AN-01 com a dependência interna ControlePauta → ControleInterno. |
+| RH-02 | Evidência documental / terminologia | Padronizar AG-03 como Funcionário do registro acadêmico; “registro escolar” permanece referência textual correlata. |
+| RH-03 | Correção conceitual | Substituir a especialização Alteração de OP-30 por Operação de Tratamento de Dados Pessoais em nível geral. |
+| RH-04 | Correção conceitual | Aplicar a mesma correção a OP-33. |
+| RH-05 | Finalidade | Ajustar a finalidade para Parcial em FA-03–06, FA-08, FA-11–14, FA-16, FA-24, FA-34 e FA-41. |
+| RH-06 | Rastreabilidade / coerência propagada | Atualizar FA-30/FA-33 e saídas dependentes em função de RH-03/RH-04. |
+| RH-07 | Responsabilidade | Nos requisitos aplicáveis, substituir a instituição como responsável presumida por responsável institucional competente a identificar. |
+| RH-08 | Correção conceitual | Em RP-25, retirar Alteração como conceito confirmado; em RP-31, manter Ator Desautorizado pendente; em RP-35, Armazenamento posterior permanece A verificar. |
+| RH-09 | Omissão / cobertura | Acrescentar RP-46 e RP-47 com base em RI05 e RI06. |
+| RH-10 | Omissão / cobertura | Acrescentar PA-21 sobre fechamento do período. |

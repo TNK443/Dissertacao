@@ -1,0 +1,169 @@
+{
+  "estudo": "Estudo II - Aplicação demonstrativa do GERPD com apoio do ChatGPT no projeto Tibico",
+  "versao": "1.0",
+  "indicadores": [
+    {
+      "indicador": "Aplicações formais do GERPD",
+      "resultado": 1
+    },
+    {
+      "indicador": "Prompts da execução",
+      "resultado": 11
+    },
+    {
+      "indicador": "Etapas do GERPD executadas",
+      "resultado": "8/8"
+    },
+    {
+      "indicador": "Saídas obrigatórias produzidas",
+      "resultado": "8/8"
+    },
+    {
+      "indicador": "Adendos de Retorno gerados pela própria IA",
+      "resultado": 7
+    },
+    {
+      "indicador": "Dados/elementos pessoais identificados",
+      "resultado": 37
+    },
+    {
+      "indicador": "Participantes/papéis registrados",
+      "resultado": 9
+    },
+    {
+      "indicador": "Operações registradas",
+      "resultado": 41
+    },
+    {
+      "indicador": "Análises de finalidade/condições",
+      "resultado": 43
+    },
+    {
+      "indicador": "Requisitos candidatos no estado bruto acumulado",
+      "resultado": 45
+    },
+    {
+      "indicador": "Requisitos após revisão",
+      "resultado": 47
+    },
+    {
+      "indicador": "Incremento humano de requisitos",
+      "resultado": "+2 / +4,4%"
+    },
+    {
+      "indicador": "Matriz bruta acumulada",
+      "resultado": "45 requisitos rastreados"
+    },
+    {
+      "indicador": "Matriz revisada",
+      "resultado": "47 requisitos rastreados"
+    },
+    {
+      "indicador": "Status revisados da rastreabilidade",
+      "resultado": "10 Completo / 13 Parcial / 24 A validar"
+    },
+    {
+      "indicador": "Pontos de atenção da IA",
+      "resultado": 20
+    },
+    {
+      "indicador": "Pontos após revisão",
+      "resultado": 21
+    },
+    {
+      "indicador": "MPA bruta",
+      "resultado": 68
+    },
+    {
+      "indicador": "MPA revisada",
+      "resultado": 71
+    },
+    {
+      "indicador": "Novos achados humanos na MPA",
+      "resultado": "+3 / +4,4%"
+    },
+    {
+      "indicador": "MPA bruta aceita sem alteração",
+      "resultado": "28/68 = 41,2%"
+    },
+    {
+      "indicador": "MPA bruta aceita com ajustes",
+      "resultado": "39/68 = 57,4%"
+    },
+    {
+      "indicador": "MPA bruta pendente",
+      "resultado": "1/68 = 1,5%"
+    },
+    {
+      "indicador": "MPA bruta rejeitada integralmente",
+      "resultado": "0/68 = 0%"
+    },
+    {
+      "indicador": "Ajustes humanos consolidados",
+      "resultado": "RH-01–RH-10"
+    },
+    {
+      "indicador": "Principal natureza dos ajustes da MPA",
+      "resultado": "Responsabilidade/competência — 22 dos 39 ajustes"
+    },
+    {
+      "indicador": "Reexecução necessária",
+      "resultado": "Não"
+    }
+  ],
+  "natureza_ajustes_mpa": [
+    {
+      "categoria": "Responsabilidade / atribuição de competência",
+      "quantidade": 22,
+      "proporcao": 0.5641025641025641
+    },
+    {
+      "categoria": "Correção conceitual ou ontológica",
+      "quantidade": 7,
+      "proporcao": 0.1794871794871795
+    },
+    {
+      "categoria": "Finalidade",
+      "quantidade": 4,
+      "proporcao": 0.10256410256410256
+    },
+    {
+      "categoria": "Granularidade",
+      "quantidade": 3,
+      "proporcao": 0.07692307692307693
+    },
+    {
+      "categoria": "Terminologia / identificação de participante",
+      "quantidade": 2,
+      "proporcao": 0.05128205128205128
+    },
+    {
+      "categoria": "Evidência / necessidade documental",
+      "quantidade": 1,
+      "proporcao": 0.02564102564102564
+    }
+  ],
+  "autoverificacao_p10": [
+    {
+      "criterio": "Completude",
+      "rotulo_diagnostico": "Parcial"
+    },
+    {
+      "criterio": "Correção conceitual",
+      "rotulo_diagnostico": "Parcial"
+    },
+    {
+      "criterio": "Rastreabilidade",
+      "rotulo_diagnostico": "Parcial"
+    },
+    {
+      "criterio": "Utilidade",
+      "rotulo_diagnostico": "Adequado"
+    },
+    {
+      "criterio": "Clareza",
+      "rotulo_diagnostico": "Parcial"
+    }
+  ],
+  "nota_interpretativa": "As proporções de revisão não representam taxa de acurácia, taxa de erro ou desempenho geral do ChatGPT."
+}

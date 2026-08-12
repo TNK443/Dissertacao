@@ -1,0 +1,76 @@
+{
+  "study_id": "EstudoII",
+  "study_title": "Aplicação demonstrativa do GERPD com apoio do ChatGPT no projeto Tibico",
+  "study_version": "1.0",
+  "execution_date": "2026-08-10",
+  "execution_model": "GPT-5.6 Sol",
+  "tool": "ChatGPT",
+  "formal_applications": 1,
+  "conversation_mode": "uma única conversa com contexto acumulado",
+  "formal_prompt_sequence": {
+    "first": "P00",
+    "last": "P10",
+    "count": 11,
+    "order": "P00 -> P01 -> P02 -> P03 -> P04 -> P05 -> P06 -> P07 -> P08 -> P09 -> P10"
+  },
+  "gerpd_stages": {
+    "prompts": "P01-P08",
+    "count": 8,
+    "completed": "8/8"
+  },
+  "post_stages": {
+    "P09": "consolidação posterior na MPA",
+    "P10": "autoverificação diagnóstica"
+  },
+  "corpus": [
+    {
+      "id": "C01",
+      "file": "C01_TIB-REQ_Documento-de-Requisitos_v1.3.pdf",
+      "role": "corpus"
+    },
+    {
+      "id": "C02",
+      "file": "C02_TIB-ANL_Especificacao-de-Requisitos_v1.2.pdf",
+      "role": "corpus"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "M01",
+      "file": "M01_GERPD_v1.0.docx",
+      "role": "instrumento metodológico",
+      "version": "1.0"
+    },
+    {
+      "id": "S01",
+      "file": "S01_OntoPrivacy_v1.png",
+      "role": "instrumento semântico",
+      "version": "1"
+    }
+  ],
+  "scope": "sistema Tibico completo conforme C01 e C02",
+  "external_web_or_sources_used_for_corpus_findings": false,
+  "analytical_human_intervention_between_P00_and_P10": false,
+  "human_review_after_P10": true,
+  "raw_outputs_preserved": true,
+  "model_parameters": "não disponibilizados / não registrados no protocolo",
+  "raw_state": {
+    "AN": "AN-01",
+    "DP": "DP-01 a DP-37",
+    "AG": "AG-01 a AG-09",
+    "OP": "OP-01 a OP-41",
+    "FA": "FA-01 a FA-43",
+    "RP": "RP-01 a RP-45",
+    "PA": "PA-01 a PA-20",
+    "AR": "AR-01 a AR-07",
+    "MPA": "MPA-01 a MPA-68"
+  },
+  "reviewed_state": {
+    "RP": "RP-01 a RP-47",
+    "PA": "PA-01 a PA-21",
+    "MPA": "MPA-01 a MPA-71",
+    "RH": "RH-01 a RH-10"
+  },
+  "sha256_checksums_generated": false,
+  "sha256_note": "Checksums SHA-256 não foram executados por solicitação expressa do usuário."
+}

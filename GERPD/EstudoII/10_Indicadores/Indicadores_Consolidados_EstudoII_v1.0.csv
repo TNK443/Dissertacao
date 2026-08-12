@@ -1,0 +1,28 @@
+﻿Indicador,Resultado
+Aplicações formais do GERPD,1
+Prompts da execução,11
+Etapas do GERPD executadas,8/8
+Saídas obrigatórias produzidas,8/8
+Adendos de Retorno gerados pela própria IA,7
+Dados/elementos pessoais identificados,37
+Participantes/papéis registrados,9
+Operações registradas,41
+Análises de finalidade/condições,43
+Requisitos candidatos no estado bruto acumulado,45
+Requisitos após revisão,47
+Incremento humano de requisitos,"+2 / +4,4%"
+Matriz bruta acumulada,45 requisitos rastreados
+Matriz revisada,47 requisitos rastreados
+Status revisados da rastreabilidade,10 Completo / 13 Parcial / 24 A validar
+Pontos de atenção da IA,20
+Pontos após revisão,21
+MPA bruta,68
+MPA revisada,71
+Novos achados humanos na MPA,"+3 / +4,4%"
+MPA bruta aceita sem alteração,"28/68 = 41,2%"
+MPA bruta aceita com ajustes,"39/68 = 57,4%"
+MPA bruta pendente,"1/68 = 1,5%"
+MPA bruta rejeitada integralmente,0/68 = 0%
+Ajustes humanos consolidados,RH-01–RH-10
+Principal natureza dos ajustes da MPA,Responsabilidade/competência — 22 dos 39 ajustes
+Reexecução necessária,Não

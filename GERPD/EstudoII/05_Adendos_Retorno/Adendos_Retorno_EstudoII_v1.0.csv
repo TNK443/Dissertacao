@@ -1,0 +1,8 @@
+﻿ID_AR,Etapa_em_que_foi_gerado,Etapa_afetada,Descricao_resumida,Registros_afetados
+AR-01,Etapa 2,Etapa 1,Complementação de AN-01 com pai e mãe do aluno como pessoas naturais cujos nomes são representados no cadastro.,AN-01; DP-11; DP-12
+AR-02,Etapa 5,Etapa 4,Refinamento de OP-20: remove DP-01 como vínculo confirmado e mantém DP-26/DP-28; nome passa a A verificar.,OP-20; DP-01; DP-26; DP-28
+AR-03,Etapa 8,Etapa 5,Refinamento de FA-17: necessidade de autenticação é funcional; uso específico de matrícula/CPF como login permanece A verificar.,FA-17; DP-29; DP-30; DP-32
+AR-04,Etapa 8,Etapa 6,Inclusão de RP-44 sem renumeração dos requisitos anteriores.,RP-44
+AR-05,Etapa 8,Etapa 7,Inclusão da rastreabilidade de RP-44.,RP-44
+AR-06,Etapa 8,Etapa 6,Inclusão de RP-45 para necessidade individual dos dados em relatórios/exportações.,RP-45; FA-35–FA-41; OP-35–OP-41
+AR-07,Etapa 8,Etapa 7,Inclusão da rastreabilidade de RP-45.,RP-45
