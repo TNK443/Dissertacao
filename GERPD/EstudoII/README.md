@@ -128,7 +128,7 @@ A aplicação utilizou dois artefatos como **corpus documental** e dois artefato
 |---|---|---|---|---|
 | **C01** | Documento de Requisitos do Tibico | v1.3 | Corpus: propósito, minimundo, requisitos funcionais, regras de negócio e requisitos não funcionais | [`C01_TIB-REQ_Documento-de-Requisitos_v1.3.pdf`](01_Corpus_e_Instrumentos/C01_TIB-REQ_Documento-de-Requisitos_v1.3.pdf) |
 | **C02** | Documento de Especificação de Requisitos do Tibico | v1.2 | Corpus: subsistemas, atores, casos de uso, fluxos, modelos, restrições e dicionário de dados | [`C02_TIB-ANL_Especificacao-de-Requisitos_v1.2.pdf`](01_Corpus_e_Instrumentos/C02_TIB-ANL_Especificacao-de-Requisitos_v1.2.pdf) |
-| **M01** | Guia para Engenharia de Requisitos de Privacidade de Dados | v1.0 | Instrumento metodológico | [`M01_GERPD_v1.0.docx`](01_Corpus_e_Instrumentos/M01_GERPD_v1.0.docx) |
+| **M01** | Guia para Engenharia de Requisitos de Privacidade de Dados | v1.0 | Instrumento metodológico | [`M01_GERPD_v1.0.pdf`](01_Corpus_e_Instrumentos/M01_GERPD_v1.0.pdf) |
 | **S01** | OntoPrivacy | v1 | Instrumento semântico | [`S01_OntoPrivacy_v1.png`](01_Corpus_e_Instrumentos/S01_OntoPrivacy_v1.png) |
 
 O corpus é considerado **integralmente**. C01 e C02 são tratados como artefatos complementares e constituem a única fonte para afirmações sobre o sistema Tibico durante a cadeia formal P00–P10.
@@ -361,7 +361,6 @@ EstudoII/
 │
 ├── 00_Documentacao/
 │   ├── README.md
-│   ├── Protocolo_Prompts_EstudoII_v1.0.docx
 │   ├── Protocolo_Prompts_EstudoII_v1.0.pdf
 │   ├── METADADOS_EXECUCAO_EstudoII.json
 │   ├── GLOSSARIO_IDENTIFICADORES.md
@@ -371,7 +370,7 @@ EstudoII/
 │   ├── README.md
 │   ├── C01_TIB-REQ_Documento-de-Requisitos_v1.3.pdf
 │   ├── C02_TIB-ANL_Especificacao-de-Requisitos_v1.2.pdf
-│   ├── M01_GERPD_v1.0.docx
+│   ├── M01_GERPD_v1.0.pdf
 │   └── S01_OntoPrivacy_v1.png
 │
 ├── 02_Prompts/
@@ -464,18 +463,22 @@ EstudoII/
 │
 ├── 11_Figuras/
 │   ├── README.md
-│   └── Figura_4.3.1_Protocolo_Execucao_EstudoII.png
+│   ├── Figura 4.3.1 Protocolo Execucao EstudoII.png
+│   ├── Figura 4.3.2 Encadeamento das oito etapas.png
+│   ├── Figura 4.3.3 Camadas do resultado do Estudo II.png
+│   ├── Figura 4.3.4 Evolucao quantitativa das saidas.png
+│   ├── Figura 4.3.5 Resultado da revisao da MPA.png
+│   └── Figura 4.3.6 Natureza dos ajustes humanos.png
 │
 └── 12_Reprodutibilidade/
     ├── README.md
     ├── COMO_REPRODUZIR_ESTUDOII.md
-    ├── MANIFESTO_ARQUIVOS_EstudoII.csv
     ├── VERSIONAMENTO.md
     └── RELACAO_ARQUIVOS_SECAO_4.3.md
 ```
 
 > [!NOTE]
-> O inventário detalhado e machine-readable dos materiais está em [`12_Reprodutibilidade/MANIFESTO_ARQUIVOS_EstudoII.csv`](12_Reprodutibilidade/MANIFESTO_ARQUIVOS_EstudoII.csv).
+> Nenhum.
 
 ---
 
@@ -510,7 +513,7 @@ Os materiais do repositório não possuem todos a mesma natureza. Para facilitar
 | **Evidência bruta** | Resposta original preservada sem edição | `Pxx_RESPOSTA_BRUTA.md` |
 | **Extração organizada** | Reprodução/organização objetiva de informação já existente na evidência bruta | Saídas E01–E08, AR, exportações tabulares |
 | **Revisão humana** | Decisão analítica realizada posteriormente pelo pesquisador | RH-01–RH-10, MPA revisada |
-| **Derivado analítico** | Síntese ou conversão produzida a partir de dados já validados | CSV, JSON, indicadores, manifesto |
+| **Derivado analítico** | Síntese ou conversão produzida a partir de dados já validados | CSV, JSON, indicadores |
 
 > [!IMPORTANT]
 > Em caso de divergência interpretativa, a **resposta bruta original** é a evidência primária da execução do ChatGPT; os arquivos revisados documentam explicitamente as decisões humanas posteriores.
@@ -600,7 +603,7 @@ Os resultados devem ser interpretados como evidências de **uma aplicação demo
 | **Interna** | Revisão conduzida pelo próprio pesquisador | RH-01–RH-10, preservação do bruto e rastreabilidade das alterações |
 | **Interna** | P10 conhecido antes da revisão humana | Autodiagnóstico tratado apenas como diagnóstico; decisões revistas contra corpus e instrumentos |
 | **Externa** | Um único projeto acadêmico e dois documentos de corpus | Delimitação explícita do alcance e manutenção de ausências como lacunas/pontos de validação |
-| **Reprodutibilidade** | Variabilidade da IA e evolução futura do modelo | Corpus, instrumentos e prompts congelados; respostas preservadas; formatos estruturados e manifesto |
+| **Reprodutibilidade** | Variabilidade da IA e evolução futura do modelo | Corpus, instrumentos e prompts congelados; respostas preservadas; formatos estruturados |
 
 ---
 
@@ -631,7 +634,7 @@ Durante a preparação deste pacote:
 - os arquivos derivados foram identificados como tais;
 - **não foram executados nem incluídos checksums SHA-256**, por decisão metodológica adotada na preparação do repositório.
 
-A ausência de checksums não altera a distinção documental entre arquivos brutos, revisados e derivados registrada nos READMEs e no manifesto.
+A ausência de checksums não altera a distinção documental entre arquivos brutos, revisados e derivados registrada nos READMEs.
 
 ---
 
@@ -674,8 +677,7 @@ Consulte [`12_Reprodutibilidade/VERSIONAMENTO.md`](12_Reprodutibilidade/VERSIONA
 ### 💻 Quero utilizar os dados em scripts ou análises
 
 1. arquivos `.csv` de `05_Adendos_Retorno/`, `06_Rastreabilidade/`, `07_Revisao_Humana/` e `08_MPA/`;
-2. [`10_Indicadores/Indicadores_Consolidados_EstudoII_v1.0.json`](10_Indicadores/Indicadores_Consolidados_EstudoII_v1.0.json);
-3. [`12_Reprodutibilidade/MANIFESTO_ARQUIVOS_EstudoII.csv`](12_Reprodutibilidade/MANIFESTO_ARQUIVOS_EstudoII.csv).
+2. [`10_Indicadores/Indicadores_Consolidados_EstudoII_v1.0.json`](10_Indicadores/Indicadores_Consolidados_EstudoII_v1.0.json).
 
 ### 🔁 Quero reproduzir metodologicamente o estudo
 
