@@ -74,11 +74,15 @@ Abaixo está a organização dos arquivos contidos neste repositório:
 
 ### `ANOTACAO_SEMANTICA/`
 
-Contém a documentação da abordagem de anotação semântica definida na Seção 3.2, o modelo visual da OntoPrivacy empregado como referência, o protótipo **Privacy Finder** e o pacote reprodutível do **Estudo I**.
+Contém a documentação da abordagem de anotação semântica, definida na Seção 3.2, o modelo visual da OntoPrivacy empregado como referência, o protótipo **Privacy Finder** e o pacote reprodutível do **Estudo I**.
+
+_Obs.: Os eixos são mantido separadamente pois possuem processos, instrumentos e evidências próprias._
 
 ### `GERPD/`
 
-Contém o Guia para Engenharia de Requisitos de Privacidade de Dados e os materiais correspondentes ao Estudo II. Esse eixo é mantido separadamente porque possui processo, instrumentos e evidências próprios.
+Contém o Guia para Engenharia de Requisitos de Privacidade de Dados (GERPD), definida na Seção 3.4, e os materiais correspondentes ao Estudo II.
+
+_Obs.: Os eixos são mantido separadamente pois possuem processos, instrumentos e evidências próprias._
 
 ---
 
