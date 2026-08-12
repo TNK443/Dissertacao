@@ -1,0 +1,23 @@
+﻿Categoria,Indicador,Resultado,Observacao
+Aplicação,Operações HTTP examinadas,27,Unidade principal de análise
+Aplicação,Operações anotadas,19,Operações com x-operationType
+Aplicação,Operações não anotadas por ausência de evidência suficiente,6,Não interpretar como ausência de tratamento na implementação
+Aplicação,Operações mantidas como pontos de validação,2,Operações de devolução dependentes de contexto
+Anotações,x-operationType,19,Propriedades aplicadas a Operation Objects
+Anotações,x-refersTo,10,Propriedades aplicadas a schemas/propriedades/parâmetros
+Anotações,Total de propriedades semânticas,29,Soma das duas extensões usadas no Estudo I
+Anotações,Associações conceituais,65,Uma propriedade pode conter vários conceitos
+Estrutura,Paths,16,Preservados em relação à especificação original
+Estrutura,Operações,27,Preservadas em relação à especificação original
+Estrutura,Schemas,67,Preservados em relação à especificação original
+Estrutura,Referências internas $ref,373,Sem referência interna quebrada
+Frequência de conceitos,Operação de Tratamento de Dados Pessoais,19,Rótulo registrado no YAML: Operação de TDP
+Frequência de conceitos,Consulta,10,Rótulo registrado no YAML: Consulta
+Frequência de conceitos,Disponibilização,10,Rótulo registrado no YAML: Disponibilização
+Frequência de conceitos,Dado Pessoal,8,Rótulo registrado no YAML: Dado Pessoal (DP)
+Frequência de conceitos,Coleta,5,Rótulo registrado no YAML: Coleta
+Frequência de conceitos,Armazenamento,5,Rótulo registrado no YAML: Armazenamento
+Frequência de conceitos,Alteração,5,Rótulo registrado no YAML: Alteração
+Frequência de conceitos,Exclusão,1,Rótulo registrado no YAML: Exclusão
+Frequência de conceitos,Pessoa Natural,1,Rótulo registrado no YAML: Pessoa Natural
+Frequência de conceitos,Pessoa Jurídica,1,Rótulo registrado no YAML: Pessoa Jurídica
