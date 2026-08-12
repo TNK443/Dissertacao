@@ -185,8 +185,7 @@ GERPD/
 │
 ├── 01_Documento_Oficial/
 │   ├── README.md
-│   ├── GERPD_v1.0.pdf
-│   └── GERPD_v1.0.docx
+│   └── GERPD_v1.0.pdf
 │
 ├── 02_Templates/
 │   ├── README.md
@@ -225,7 +224,7 @@ Cada pasta e subpasta possui um `README.md` próprio, contendo a finalidade do d
 
 | Diretório | Conteúdo | Quando consultar |
 |---|---|---|
-| [`01_Documento_Oficial/`](01_Documento_Oficial/) | GERPD v1.0 em PDF e DOCX | Para compreender integralmente o guia e suas regras de aplicação |
+| [`01_Documento_Oficial/`](01_Documento_Oficial/) | GERPD v1.0 em PDF | Para compreender integralmente o guia e suas regras de aplicação |
 | [`02_Templates/`](02_Templates/) | Templates reutilizáveis | Para iniciar uma nova aplicação do GERPD |
 | [`03_Figuras/`](03_Figuras/) | Figuras canônicas do guia | Para visualizar fundamentos, processo e formação da MPA |
 | [`EstudoII/`](EstudoII/) | Aplicação demonstrativa completa | Para examinar corpus, prompts, respostas, saídas, revisão e resultados do estudo |
@@ -302,8 +301,7 @@ Para detalhes, consulte o [`README.md` específico do Estudo II](EstudoII/README
 
 A versão de referência do GERPD está disponível em:
 
-- [`GERPD_v1.0.pdf`](01_Documento_Oficial/GERPD_v1.0.pdf) — versão recomendada para leitura e citação;
-- [`GERPD_v1.0.docx`](01_Documento_Oficial/GERPD_v1.0.docx) — versão editável do documento consolidado.
+- [`GERPD_v1.0.pdf`](01_Documento_Oficial/GERPD_v1.0.pdf) — versão recomendada para leitura e citação.
 
 ### Templates
 
