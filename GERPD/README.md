@@ -476,9 +476,6 @@ Para facilitar citações automatizadas, recomenda-se manter também um arquivo 
 
 Os direitos de uso, redistribuição e adaptação dos materiais deste repositório devem seguir a licença definida na raiz geral do projeto.
 
-> [!WARNING]
-> Caso a licença ainda não tenha sido definida, recomenda-se adicionar um arquivo `LICENSE` antes da publicação definitiva do repositório.
-
 ---
 
 ## 💬 Questões e contribuições
