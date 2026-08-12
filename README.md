@@ -1,4 +1,4 @@
-# Dissertação — OntoPrivacy, Privacidade de Dados e Engenharia de Software
+# Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
 
 ![Status](https://img.shields.io/badge/status-reposit%C3%B3rio%20de%20pesquisa-0b5d7a)
 ![OntoPrivacy](https://img.shields.io/badge/base%20sem%C3%A2ntica-OntoPrivacy-3f7f5f)
