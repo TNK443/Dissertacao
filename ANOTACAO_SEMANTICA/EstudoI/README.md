@@ -232,3 +232,15 @@ A release 2.6.1 da API Pix foi publicada pelo Banco Central do Brasil. O arquivo
 ## 14. Relação com o repositório histórico
 
 O repositório [`TNK443/Streamit`](https://github.com/TNK443/Streamit) é tratado como registro da primeira publicação do Privacy Finder e de versões anteriores dos materiais. O artefato canônico deste Estudo I é **`R01_API_PIX_Anotado.yaml` deste diretório**, alinhado às decisões consolidadas no Capítulo 4 atual.
+
+---
+
+<div align="center">
+
+**Estudo I · ANOTAÇÃO SEMÂNTICA · OntoPrivacy v1 · OpenAPI · API_PIX**
+
+**Execução Formal · API_PIX_Anotado · Revisão Humana**
+
+*Material complementar da Seção 4.2 da dissertação — versão 1.0, agosto de 2026.*
+
+</div>
