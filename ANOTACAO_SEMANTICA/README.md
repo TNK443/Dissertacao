@@ -2,9 +2,9 @@
     
 # Anotação Semântica para Web Services / OpenAPI
 
-![Camada](https://img.shields.io/badge/artefato-Anota%C3%A7%C3%A3o%20Sem%C3%A2ntica-0b5d7a)
-![Base](https://img.shields.io/badge/base-OntoPrivacy-3f7f5f)
-![Aplicação](https://img.shields.io/badge/aplica%C3%A7%C3%A3o-Estudo%20I%20%7C%20API%20Pix-59636e)
+![Camada](https://img.shields.io/badge/artefato-Anota%C3%A7%C3%A3o%20Sem%C3%A2ntica-0b5d7a?style=flat-square)
+![Base](https://img.shields.io/badge/base-OntoPrivacy-3f7f5f?style=flat-square)
+![Aplicação](https://img.shields.io/badge/aplica%C3%A7%C3%A3o-Estudo%20I%20%7C%20API%20Pix-59636e?style=flat-square)
 
 </div>
 
