@@ -1,10 +1,9 @@
 # Estudo I — Aplicação da Anotação Semântica na API Pix
 
-![Estudo](https://img.shields.io/badge/Estudo%20I-v1.0-1f6feb?style=flat-square)
-![Estudo](https://img.shields.io/badge/Estudo-I-0b5d7a)
-![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e)
-![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.0-6ba539)
-![Resultado](https://img.shields.io/badge/anota%C3%A7%C3%B5es-29-3f7f5f)
+![Estudo](https://img.shields.io/badge/Estudo%20I-v1.0-0b5d7a?style=flat-square)
+![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e?style=flat-square)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.0-6ba539?style=flat-square)
+![Resultado](https://img.shields.io/badge/anota%C3%A7%C3%B5es-29-3f7f5f?style=flat-square)
 
 Este diretório contém o **pacote reprodutível do Estudo I**, correspondente à Seção 4.2 da dissertação. O estudo aplica a abordagem definida na Seção 3.2 a uma especificação real da **API Pix**, utilizando a OntoPrivacy como vocabulário conceitual para explicitar aspectos de privacidade diretamente no contrato OpenAPI.
 
