@@ -114,8 +114,6 @@ OntoPrivacy/
 ├── ONTOPRIVACY.md
 ├── VERSIONAMENTO.md
 ├── CHANGELOG.md
-├── RECOMENDACOES_E_DECISOES.md
-├── INVENTARIO.md
 ├── 01_MODELO/
 │   ├── README.md
 │   ├── OntoPrivacy_v2.asta
