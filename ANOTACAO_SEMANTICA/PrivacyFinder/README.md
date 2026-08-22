@@ -1,8 +1,8 @@
 # Privacy Finder
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.61.1-ff4b4b)
-![Função](https://img.shields.io/badge/fun%C3%A7%C3%A3o-recupera%C3%A7%C3%A3o%20sint%C3%A1tica-59636e)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.61.1-ff4b4b?style=flat-square)
+![Função](https://img.shields.io/badge/fun%C3%A7%C3%A3o-recupera%C3%A7%C3%A3o%20sint%C3%A1tica-59636e?style=flat-square)
 
 O **Privacy Finder** é o protótipo utilizado no eixo de anotação semântica para apoiar a **localização, listagem, filtragem e visualização** das extensões registradas em especificações OpenAPI/YAML.
 
