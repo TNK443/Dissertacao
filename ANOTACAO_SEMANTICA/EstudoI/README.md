@@ -1,5 +1,6 @@
 # Estudo I — Aplicação da Anotação Semântica na API Pix
 
+![Estudo](https://img.shields.io/badge/Estudo%20I-v1.0-1f6feb?style=flat-square)
 ![Estudo](https://img.shields.io/badge/Estudo-I-0b5d7a)
 ![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-3.0.0-6ba539)
