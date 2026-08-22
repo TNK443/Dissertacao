@@ -226,3 +226,14 @@ A pasta `OntoPrivacy/` documenta a versão final. As aplicações históricas pe
 ## 📚 Publicação relacionada à versão inicial
 
 MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção da Lei Geral de Proteção de Dados Pessoais por meio de anotações semânticas em descrições de serviços Web**. *Em Questão*, v. 31, e-139608, 2025. DOI: `10.1590/1808-5245.31.139608`.
+
+---
+
+<div align="center">
+
+**OntoPrivacy · Ontologia de Privacidade de Dados**  
+**Conceitos · Privacidade de Dados · LGPD · ISO/IEC 29100 · Engenharia de Software**
+
+*Material complementar de pesquisa acadêmica — versão 2.0, agosto de 2026.*
+
+</div>
