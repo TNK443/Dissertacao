@@ -92,15 +92,15 @@ flowchart LR
 
 ### 1. Identificabilidade
 
-Explica por que um Dado desempenha o papel de Dado Pessoal e a qual Titular ele se refere. Pode ser **Direta** ou **Indireta**.
+Explica por que um `Dado` desempenha o papel de `Dado Pessoal` e a qual `Titular de DP` ele se refere. Pode ser **Direta** ou **Indireta**.
 
 ### 2. Tratamento de Dados Pessoais
 
-Representa a situação relacional na qual Dados Pessoais são abrangidos por uma Operação de TDP ou por um Conjunto de Operações, envolvendo Partes Interessadas, Controladores, Operadores e Finalidades.
+Representa a situação relacional na qual `Dados Pessoais` são abrangidos por uma `Operação de TDP` ou por um `Conjunto de Operações`, envolvendo `Partes Interessadas`, `Controladores`, `Operadores` e `Finalidades`.
 
 ### 3. Consentimento
 
-Representa a manifestação do Titular, dirigida a um ou mais Controladores, relativa a um TDP e a Finalidades determinadas. A existência de Consentimento no modelo não implica validade jurídica ou licitude.
+Representa a manifestação do `Titular de DP`, dirigida a um ou mais `Controladores`, relativa a um `TDP` e a `Finalidades` determinadas. A existência de `Consentimento` no modelo não implica validade jurídica ou licitude.
 
 Leia a descrição completa em [`ONTOPRIVACY.md`](./ONTOPRIVACY.md).
 
@@ -114,7 +114,6 @@ ONTOPRIVACY/
 ├── ONTOPRIVACY.md
 ├── VERSIONAMENTO.md
 ├── CHANGELOG.md
-├── INVENTARIO.md
 ├── 01_MODELO/
 │   ├── README.md
 │   ├── OntoPrivacy_v2.asta
