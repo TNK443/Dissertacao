@@ -1,8 +1,12 @@
+<div align="center">
+    
 # Anotação Semântica para Web Services / OpenAPI
 
 ![Camada](https://img.shields.io/badge/artefato-Anota%C3%A7%C3%A3o%20Sem%C3%A2ntica-0b5d7a)
 ![Base](https://img.shields.io/badge/base-OntoPrivacy-3f7f5f)
 ![Aplicação](https://img.shields.io/badge/aplica%C3%A7%C3%A3o-Estudo%20I%20%7C%20API%20Pix-59636e)
+
+</div>
 
 Este diretório reúne os materiais correspondentes à **abordagem de anotação semântica para Web Services**, apresentada na **Seção 3.2 da dissertação**, e sua ligação com o **Estudo I**, apresentado na Seção 4.2.
 
@@ -140,3 +144,14 @@ A aplicação sustenta a **viabilidade técnica de acrescentar metadados de priv
 3. `A03_CRITERIOS_DE_MAPEAMENTO.md`;
 4. `EstudoI/README.md`;
 5. `PrivacyFinder/README.md`.
+
+---
+
+<div align="center">
+
+**ANOTAÇÃO SEMÂNTICA PARA WEB SERVICES**  
+**Anotação Semântica · Web Services · APIs REST · OpenAPI· OntoPrivacy · Privacidade de Dados **
+
+*Material complementar de pesquisa acadêmica (Seção 3.3) — versão 1.0, agosto de 2026.*
+
+</div>
