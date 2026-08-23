@@ -1,24 +1,18 @@
 # Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
 
-![Status](https://img.shields.io/badge/Status-reposit%C3%B3rio%20de%20pesquisa-0b5d7a)
+![OE1](https://img.shields.io/badge/OE-OntoPrivacy-0f766e)
+![OE2(a)](https://img.shields.io/badge/OE-Anotacao%20Semantica-0b5d7a)
+![OE2(b)](https://img.shields.io/badge/OE-GERPD-d97706)
 
-![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-vers%C3%A3o%20v2-3f7f5f)
+![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-v2-3f7f5f)
 ![Modelo](https://img.shields.io/badge/Modelagem-UFO%20%7C%20OntoUML-6f42c1)
 ![Método](https://img.shields.io/badge/M%C3%A9todo-SABiO-d97706)
-
 ![EstudoI](https://img.shields.io/badge/Estudo%20I-v1.0-0b5d7a)
-![PrivacyFinder](https://img.shields.io/badge/PrivacyFinder-v1.0-3f7f5f)
+![PrivacyFinder](https://img.shields.io/badge/PrivacyFinder-v1.0-6f82c1)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-3.x-6ba539)
 ![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e)
-
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb)
-
-![OE](https://img.shields.io/badge/OE-OntoPrivacy-0f766e?style=flat-square)
-![OE](https://img.shields.io/badge/OE-Anotacao%20Semantica-0f766e?style=flat-square)
-![OE](https://img.shields.io/badge/OE-GERPD-d97706?style=flat-square)
-
-![Fundamentação](https://img.shields.io/badge/fundamenta%C3%A7%C3%A3o-UFO%20%7C%20OntoUML-6f42c1?style=flat-square)
 
 > **Título do Trabalho:** [Insira aqui o Título da sua Dissertação]  
 > **Autor:** [Seu Nome Completo]  
