@@ -2,7 +2,7 @@
 
 # Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
 
-![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e?style=flat-square)
+![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e?style=flat-square) ||
 ![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-v2-3f7f5f)
 ![Modelo](https://img.shields.io/badge/Modelagem-UFO%20%7C%20OntoUML-6f42c1)
 ![Método](https://img.shields.io/badge/M%C3%A9todo-SABiO-d97706)
@@ -169,7 +169,7 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 <div align="center">
 
 **Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software**  
-**OntoPrivacy · Anotação Semântica · GERP **
+**OntoPrivacy · Anotação Semântica · GERP**
 
 *Material complementar de pesquisa acadêmica — versão 1.0, agosto de 2026.*
 
