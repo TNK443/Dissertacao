@@ -1,6 +1,6 @@
 # Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
 
-![OE1](https://img.shields.io/badge/OE1-OntoPrivacy-0f766e)
+![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e)
 ![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-v2-3f7f5f)
 ![Modelo](https://img.shields.io/badge/Modelagem-UFO%20%7C%20OntoUML-6f42c1)
 ![Método](https://img.shields.io/badge/M%C3%A9todo-SABiO-d97706)
