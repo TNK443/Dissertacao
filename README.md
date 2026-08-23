@@ -1,19 +1,23 @@
+<div align="center">
+
 # Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
 
-![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e)
+![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e?style=flat-square)
 ![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-v2-3f7f5f)
 ![Modelo](https://img.shields.io/badge/Modelagem-UFO%20%7C%20OntoUML-6f42c1)
 ![Método](https://img.shields.io/badge/M%C3%A9todo-SABiO-d97706)
 
-![OE2(a)](https://img.shields.io/badge/OE2(a)-Anotacao%20Semantica-0b5d7a)
+![OE2(a)](https://img.shields.io/badge/OE2(a)-Anotacao%20Semantica-0b5d7a?style=flat-square)
 ![EstudoI](https://img.shields.io/badge/Estudo%20I-v1.0-0b5d7a)
 ![PrivacyFinder](https://img.shields.io/badge/PrivacyFinder-v1.0-6f82c1)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-3.x-6ba539)
 ![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e)
 
-![OE2(b)](https://img.shields.io/badge/OE2(b)-GERPD-d97706)
+![OE2(b)](https://img.shields.io/badge/OE2(b)-GERPD-d97706?style=flat-square)
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb)
+
+</div>
 
 > **Título do Trabalho:** [Insira aqui o Título da sua Dissertação]  
 > **Autor:** [Seu Nome Completo]  
@@ -159,3 +163,14 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 - Repositório histórico do Privacy Finder: [TNK443/Streamit](https://github.com/TNK443/Streamit)
 - Especificação de referência da API Pix: [bacen/pix-api](https://github.com/bacen/pix-api)
 - Documentação da linguagem OntoUML: [OntoUML Specification](https://ontouml.readthedocs.io/)
+
+---
+
+<div align="center">
+
+**Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software**  
+**OntoPrivacy · Anotação Semântica · GERP **
+
+*Material complementar de pesquisa acadêmica — versão 1.0, agosto de 2026.*
+
+</div>
