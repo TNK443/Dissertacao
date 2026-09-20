@@ -1,22 +1,23 @@
 <div align="center">
 
-# ONTOPRIVACY:
+# ONTOPRIVACY
+
 ## UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
 
 </div>
 
-![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e?style=flat-square) **.**
+![OE1](https://img.shields.io/badge/%20OE1%20%20-OntoPrivacy-0f766e?style=flat-square) **→**
 ![OntoPrivacy](https://img.shields.io/badge/OntoPrivacy-v2-3f7f5f?style=flat-square)
 ![Modelo](https://img.shields.io/badge/Modelagem-UFO%20%7C%20OntoUML-6f42c1?style=flat-square)
 ![Método](https://img.shields.io/badge/M%C3%A9todo-SABiO-d97706?style=flat-square)
 
-![OE2(a)](https://img.shields.io/badge/OE2(a)-Anotacao%20Semantica-0b5d7a?style=flat-square) **.**
+![OE2(a)](https://img.shields.io/badge/OE2(a)-Anotacao%20Semantica-0b5d7a?style=flat-square) **→**
 ![EstudoI](https://img.shields.io/badge/Estudo%20I-v1.0-0b5d7a?style=flat-square)
 ![PrivacyFinder](https://img.shields.io/badge/PrivacyFinder-v1.0-6f82c1?style=flat-square)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-3.x-6ba539?style=flat-square)
 ![API Pix](https://img.shields.io/badge/API%20Pix-2.6.1-59636e?style=flat-square)
 
-![OE2(b)](https://img.shields.io/badge/OE2(b)-GERPD-d97706?style=flat-square) **.**
+![OE2(b)](https://img.shields.io/badge/OE2(b)-GERPD-d97706?style=flat-square) **→**
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043?style=flat-square)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb?style=flat-square)
 
@@ -66,7 +67,7 @@ flowchart LR
     OP0("fa:fa-sitemap <b>ONTOPRIVACY</b>"):::ontologia
 
     %% Agrupamento das Ontologias
-    subgraph F1["<br><b>FASE 1: Ontologia de Domínio</b><br>"]
+    subgraph F1["<b>FASE 1: Ontologia de Domínio</b>"]
         OP1("fa:fa-code-branch OntoPrivacy v1\n(Versão Inicial)"):::ontologiav1
         OP2("fa:fa-cube <b>OntoPrivacy v2</b>\n(Versão Final)"):::ontologiav2
     end
@@ -74,13 +75,13 @@ flowchart LR
     DOC[/"fa:fa-book Catálogo, QCs, Rastreabilidade\ne Validação Conceitual"/]:::doc
 
     %% Agrupamento das Propostas Desenvolvidas
-    subgraph F2["<br><b>FASE 2: Propostas</b><br>"]
+    subgraph F2["<b>FASE 2: Propostas</b>"]
         AS("fa:fa-network-wired Anotação Semântica\n(OpenAPI / Web Services)"):::proposta
         G("fa:fa-clipboard-list GERPD v1.0\n(Engenharia de Requisitos)"):::proposta
     end
 
     %% Agrupamento dos Estudos de Caso
-    subgraph F3["<br><b>FASE 3: Estudos / Aplicações</b><br>"]
+    subgraph F3["<b>FASE 3: Estudos / Aplicações</b>"]
         E1{{"fa:fa-qrcode Estudo I: API Pix"}}:::estudo
         E2{{"fa:fa-robot Estudo II: Tibico + ChatGPT"}}:::estudo
     end
@@ -107,11 +108,11 @@ flowchart LR
     style F3 fill:#F3E5F5,stroke:#BA68C8,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
 ```
 
-| 🧩 Artefato | 📖 Papel na Dissertação | 🔗 Base Ontológica | 🎯 Aplicação | 📂 Diretório |
+| 🧩 Artefato | Papel na Dissertação | Base Ontológica | Aplicação | 📂 Diretório |
 | :---: | :--- | :---: | :--- | :--- |
-| **OntoPrivacy** | Seção 3.1 / Ontologia de Referência de Domínio (OE01) | Versão Conceitual | "- Anotação Semântica<br>- GERPD" | [`/OntoPrivacy`](./OntoPrivacy/) |
-| **Anotação Semântica** | Seção 3.2 / OE02(a) | OntoPrivacy | Estudo I: API Pix (OE03) | [`/ANOTACAO_SEMANTICA`](./ANOTACAO_SEMANTICA/) |
-| **GERPD v1.0** | Seção 3.3 / OE02(b) | OntoPrivacy | Estudo II: Tibico + ChatGPT (OE04) | [`/GERPD`](./GERPD/) |
+| <small>**OntoPrivacy**</small> | <small>Seção 3.1 / Ontologia de Referência de Domínio (OE01)</small> | <small>Versão Conceitual</small> | <small>- Anotação Semântica<br>- GERPD</small> | [`/ONTOPRIVACY`](./ONTOPRIVACY/) |
+| <small>**Anotação Semântica**</small> | <small>Seção 3.2 / OE02(a)</small> | <small>OntoPrivacy</small> | <small>Estudo I: API Pix (OE03)</small> | [`/ANOTACAO_SEMANTICA`](./ANOTACAO_SEMANTICA/) |
+| <small>**GERPD v1.0**</small> | <small>Seção 3.3 / OE02(b)</small> | <small>OntoPrivacy</small> | <small>Estudo II: Tibico + ChatGPT (OE04)</small> | [`/GERPD`](./GERPD/) |
 
 > [!NOTE]
 > Na dissertação, a versão final congelada é denominada **OntoPrivacy v2**.
@@ -172,9 +173,9 @@ A **OntoPrivacy** é uma ontologia de referência de domínio, em nível conceit
 
 Sua arquitetura é organizada por três entidades relacionais centrais:
 
-- **Identificabilidade** — relaciona `Dados Pessoais` ao `Titular de DP` e distingue identificação direta e indireta;
-- **Tratamento de Dados Pessoais** — relaciona dados, participantes, operações e `Finalidade`'s;
-- **Consentimento** — relaciona `Titular de DP`, `Controlador`, `TDP` e `Finalidade`'s determinadas.
+- **Identificabilidade:** relaciona `Dados Pessoais` ao `Titular de DP` e distingue identificação direta e indireta;
+- **Tratamento de Dados Pessoais:** relaciona dados, participantes, operações e `Finalidade`'s;
+- **Consentimento:** relaciona `Titular de DP`, `Controlador`, `TDP` e `Finalidade`'s determinadas.
 
 A documentação pública inclui **43 conceitos**, **21 relações**, **7 conjuntos de generalização**, **7 Questões de Competência** e **14 cenários de validação conceitual**.
 
@@ -226,6 +227,7 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 OntoPrivacy · Anotação Semântica · GERP
 
 *Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*  
+
 *Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*  
 *Instituto Federal do Espírito Santo (IFES), Campus Serra*
 
