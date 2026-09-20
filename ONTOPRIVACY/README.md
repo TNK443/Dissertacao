@@ -75,22 +75,21 @@ Leia a política completa em [`VERSIONAMENTO.md`](./VERSIONAMENTO.md).
 
 A leitura da OntoPrivacy é organizada por três `relators` centrais:
 
-[![](https://mermaid.ink/img/pako:eNp9U02P2jAQ_SuRVyu1UmAT8gG4CIlCkZC2AlU5telhFhtwm9jIdrR0Eb-nh5576m33j3ViEg5taXLJTN6892bGPpK1YpxQsinU43oH2uY6lx4-t7fePWiQX4B6ky2Xlhvv1Yobo8DcLfUWpHiCl-8vP7l53dasCzBmxjee5gVYpb2NKAp6M4_eJfPEN1arr5zepJPw7XDShJ1HweyO9vYHf60KpelNOKnfNzVnyzv7lJMZMJWTz16nM_ZmqybhnQ0V-OOCXTnIAhEjMX7-0Vh5_jW6E-M8l6OH8YJhO2Ij1vAgCsGAcUwiBaW0QbdkC8eVIVcmbFWA9hhHhb_lMmfpmmCmwUKJosrVo3HTOBfmmnTNt8J94NgFDl8jHBgYJOQenPfRjgPF26olVi33XDebqeUy5_dP4Ly1W-L-L17nQsJ5Iv8oyVxi-p8-p0qaerSu1WuNTbMP98iBWDwABc5Ct1rTi1Iz1Utifg6JT7ZaMEKtrrhPSq5LqENyrGE5sTteonOKn5qz6tBxRyonuTxh6R7kR6XKtlqrarsjdAOFwajaM7B8JmCrobxkNZeM66mqpCU0TIPYJ5wJbOb9-da4y-OYCT2SA6G9XtwNo2CYpuEgTXpRjBXfCO2H3ShIwjDux2kwjPrJySdPzkvQHaSD_jAZBnEvidIwHJx-A5wqJ9A?type=png)](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuW0UqtFNiEfAAuQqJQJKStQFVObXqYxQbcJjGyHS27iN_TQ8899bb7xzr5olJbmlwykzfvvRmPT3SjuKCMJjrJt6l62OxB2zIg-NzckDvQkH8BRqY7kVthyKu1MEaBuV3pHeTyCV6-vfwQ5nVbs0nBmLnYEi1SsEqTrUxT1ln478JF6Bir1VfBOtHUezuaNmH3QXK7Z_3D0dmoVGnW8abl-6bkbHnnnxI6B64S-pl0uxMyXzcJUhtK8ccFu64gS0SM5eT5e2Pl-ef4Vk6SJB_fT5Yc25FbuYF7mUoOXGASKRhjDbolW1ZcMXLF0hYpaMIFKvwtF1eWrgnGGixkKKqqejRuGufSXJMu-dZ4Hjh2icPXCAcOBgkFgfo82nGgeFu1wqrVQejmZEq5uPL7J3DR2s1wBy5eFzKHeiL_KImrxOw_fc5UbsrRVq1ea2wWf7hDDsTiAqQ4C91qzS5KzVQviUUdUofutOSUWV0Ih2ZCZ1CG9FTCEmr3IkPnDD-14MWxW61UQpP8jKUHyD8qlbXVWhW7PWVbSA1GxYGDFXMJOw2_ISLnQs9UkVvKvMh1HSq4xF7e1xenuj8VMWUneqSs3w96nu-OosgbRmHfDwKHPlI28Hq-G3peMAgid-QPwrNDnyorbm8YDQejcOQG_dCPPG94_gUioCkZ)
-
 ```mermaid
 flowchart
     %% Laranja: Agentes (Pessoas/Organizações)
     classDef relator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
+    classDef geral   fill:#F8F9FA,stroke:#1A1A1A,stroke-width:2px,color:#1A1A1A;
 
-    D["Dado"] --> DP["Dado Pessoal"]
+    D["Dado"]:::geral --> DP["Dado Pessoal"]:::geral
     DP --> I["<i>«relator»</i>\n<b>Identificabilidade<b>"]:::relator
-    I --> T["Titular de DP"]
+    I --> T["Titular de DP"]:::geral
     DP --> TDP["<i>«relator»</i>\n<b>Tratamento de Dados Pessoais<b>"]:::relator
-    P["Partes interessadas\ne agentes"] --> TDP
-    O["Operações de TDP"] --> TDP
-    F["<i>«mode»</i>\nFinalidade"] --> TDP
+    P["Partes interessadas\ne agentes"]:::geral --> TDP
+    O["Operações de TDP"]:::geral --> TDP
+    F["<i>«mode»</i>\nFinalidade"]:::geral --> TDP
     T --> C["<i>«relator»</i>\n<b>Consentimento<b>"]:::relator
-    CTRL["Controlador"] --> C
+    CTRL["Controlador"]:::geral --> C
     TDP --> C
     F --> C
 ```
@@ -188,9 +187,9 @@ flowchart LR
     %% ESTILIZAÇÃO DAS CAIXAS (CLEAN DESIGN)
     %% --------------------------------------------------------
     %% Fundos neutros (cinza super claro) para não ofuscar os nós coloridos
-    style G1 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
-    style G2 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
-    style G3 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
+    style G1 fill:#F8F9FA,stroke:#656565,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
+    style G2 fill:#F8F9FA,stroke:#656565,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
+    style G3 fill:#F8F9FA,stroke:#656565,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
 ```
 
 ### 1. Identificabilidade
