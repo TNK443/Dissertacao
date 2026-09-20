@@ -221,7 +221,7 @@ ONTOPRIVACY/
 │   └── OntoPrivacy_v2.png
 ├── 02_METODOLOGIA/
 │   ├── README.md
-│   ├── SABIO_E_SABIOX.md
+│   ├── SABIO.md
 │   └── UFO_E_ONTOUML.md
 ├── 03_CATALOGO/
 │   ├── README.md
@@ -257,7 +257,7 @@ ONTOPRIVACY/
 |---|---|---|
 | [`ONTOPRIVACY.md`](./ONTOPRIVACY.md) | descrição acadêmica detalhada | para compreender propósito, conceitos, relações e limites |
 | [`01_MODELO/`](./01_MODELO/) | ASTA e PNG canônicos | para abrir ou visualizar o modelo |
-| [`02_METODOLOGIA/`](./02_METODOLOGIA/) | SABiO, SABiOx, UFO e OntoUML | para compreender método e fundamentação |
+| [`02_METODOLOGIA/`](./02_METODOLOGIA/) | SABiO, UFO e OntoUML | para compreender método e fundamentação |
 | [`03_CATALOGO/`](./03_CATALOGO/) | catálogo de conceitos, relações e elementos | para consultar definições e classificações |
 | [`04_VALIDACAO/`](./04_VALIDACAO/) | QCs, cenários e cobertura | para examinar a avaliação conceitual |
 | [`05_RASTREABILIDADE/`](./05_RASTREABILIDADE/) | fontes e decisões | para rastrear a origem e a governança dos elementos |
@@ -316,7 +316,7 @@ A pasta `ONTOPRIVACY/` documenta a versão final. As aplicações históricas pe
 
 1. `README.md`;
 2. `ONTOPRIVACY.md`;
-3. `02_METODOLOGIA/SABIO_E_SABIOX.md`;
+3. `02_METODOLOGIA/SABIO.md`;
 4. `02_METODOLOGIA/UFO_E_ONTOUML.md`;
 5. `03_CATALOGO/README.md`;
 6. `04_VALIDACAO/README.md`;
