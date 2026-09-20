@@ -1,4 +1,4 @@
-# Informações para Repositório GitHub - OntoPrivacy
+# OntoPrivacy
 # 1. Diagnóstico executivo
 
 A OntoPrivacy v2 apresenta uma **estrutura conceitual madura, delimitada e coerente com seu posicionamento como ontologia de referência de domínio**. Seu principal mérito é representar o domínio por meio de três estruturas relacionais centrais:
@@ -21,32 +21,32 @@ A conclusão geral é:
 
 ## 1.1 Avaliação global
 
-| Dimensão                             |                     Avaliação | Diagnóstico                                                                                                                             |
-| ------------------------------------ | ----------------------------: | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Delimitação do domínio               |                     **Forte** | O modelo concentra-se nos conceitos necessários ao tratamento, à identificabilidade, aos participantes, ao consentimento e à finalidade |
-| Adequação ao objetivo da dissertação |                     **Forte** | O vocabulário é aplicável à anotação de APIs e à análise de requisitos                                                                  |
-| Fundamentação UFO/OntoUML            |                     **Forte** | A maior parte das classificações expressa adequadamente identidade, rigidez e dependência                                               |
-| Arquitetura relacional               |                     **Forte** | Os três `relators` oferecem uma organização clara e integrada                                                                           |
-| Modelagem da Finalidade              |                     **Forte** | A Finalidade passou a caracterizar o TDP e relacionar Controlador, Consentimento e Titular                                              |
-| Tratamento e operações               |                     **Forte** | O TDP fornece identidade às operações classificadas como `subkind`                                                                      |
-| Dados e identificabilidade           |                     **Forte** | A pessoalidade do dado é explicada relacionalmente, e não apenas declarada                                                              |
-| Consentimento                        |                     **Forte** | É independente da existência do TDP e vinculado a Finalidades determinadas                                                              |
-| Definições                           |                       **Boa** | Todos os conceitos têm definição; duas relações exigem correção documental                                                              |
-| Correspondência ASTA–PNG             |                     **Forte** | Classes, generalizações e associações principais estão presentes nos dois artefatos                                                     |
-| Legibilidade do diagrama único       |       **Intermediária/forte** | O modelo é denso, mas possui agrupamentos e codificação visual consistentes                                                             |
+| Dimensão                             | Diagnóstico                                                                                                                             |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Delimitação do domínio               | O modelo concentra-se nos conceitos necessários ao tratamento, à identificabilidade, aos participantes, ao consentimento e à finalidade |
+| Adequação ao objetivo da dissertação | O vocabulário é aplicável à anotação de APIs e à análise de requisitos                                                                  |
+| Fundamentação UFO/OntoUML            | A maior parte das classificações expressa adequadamente identidade, rigidez e dependência                                               |
+| Arquitetura relacional               | Os três `relators` oferecem uma organização clara e integrada                                                                           |
+| Modelagem da Finalidade              | A Finalidade passou a caracterizar o TDP e relacionar Controlador, Consentimento e Titular                                              |
+| Tratamento e operações               | O TDP fornece identidade às operações classificadas como `subkind`                                                                      |
+| Dados e identificabilidade           | A pessoalidade do dado é explicada relacionalmente, e não apenas declarada                                                              |
+| Consentimento                        | É independente da existência do TDP e vinculado a Finalidades determinadas                                                              |
+| Definições                           | Todos os conceitos têm definição; duas relações exigem correção documental                                                              |
+| Correspondência ASTA–PNG             | Classes, generalizações e associações principais estão presentes nos dois artefatos                                                     |
+| Legibilidade do diagrama único       | O modelo é denso, mas possui agrupamentos e codificação visual consistentes                                                             |
 
 ---
 
 ## 1.2 Inventário
 
 | Elemento                      |   Quantidade |
-| ----------------------------- | -----------: |
+| ----------------------------- | :----------: |
 | Classificadores               |       **43** |
 | Generalizações                |       **36** |
 | Associações                   |       **21** |
-| Atributos                     |        **1** |
-| Restrições                    |        **8** |
-| Classificadores abstratos     |        **8** |
+| Atributos                     |       **01** |
+| Restrições                    |       **08** |
+| Classificadores abstratos     |       **08** |
 | Classificadores com definição | **43 de 43** |
 | Associações com definição     | **21 de 21** |
 
@@ -66,15 +66,15 @@ Sua definição interna estabelece que se trata da expressão textual obrigatór
 ## 1.3 Distribuição dos estereótipos
 
 | Estereótipo      | Quantidade |
-| ---------------- | ---------: |
+| ---------------- | :--------: |
 | `<<subkind>>`    |         18 |
 | `<<role>>`       |         10 |
-| `<<roleMixin>>`  |          5 |
-| `<<kind>>`       |          3 |
-| `<<relator>>`    |          3 |
-| `<<mode>>`       |          2 |
-| `<<category>>`   |          1 |
-| `<<collective>>` |          1 |
+| `<<roleMixin>>`  |         05 |
+| `<<kind>>`       |         03 |
+| `<<relator>>`    |         03 |
+| `<<mode>>`       |         02 |
+| `<<category>>`   |         01 |
+| `<<collective>>` |         01 |
 | **Total**        |     **43** |
 
 Os classificadores abstratos são:
@@ -91,12 +91,12 @@ Os classificadores abstratos são:
 ## 1.4 Distribuição das associações
 
 | Tipo de relação        | Quantidade |
-| ---------------------- | ---------: |
+| ---------------------- | :--------: |
 | `<<mediation>>`        |         10 |
-| `<<characterization>>` |          2 |
-| `<<material>>`         |          2 |
-| `<<memberOf>>`         |          2 |
-| Associação comum       |          5 |
+| `<<characterization>>` |         02 |
+| `<<material>>`         |         02 |
+| `<<memberOf>>`         |         02 |
+| Associação comum       |         05 |
 | **Total**              |     **21** |
 
 A quantidade de mediações é coerente com a centralidade dos três `relators` e demonstra que o modelo não se limita a uma taxonomia: ele representa dependências entre dados, participantes e situações relacionais.
@@ -575,7 +575,7 @@ Sinônimo normativo: Eliminação
 
 Na redação da dissertação, a primeira ocorrência pode ser apresentada como:
 
-> **Exclusão — denominada “eliminação” na LGPD — é a operação de tratamento pela qual um dado ou conjunto de dados é excluído, independentemente do procedimento empregado.**
+> **Exclusão - denominada “eliminação” na LGPD - é a operação de tratamento pela qual um dado ou conjunto de dados é excluído, independentemente do procedimento empregado.**
 
 Depois disso, `Exclusão` deve ser usado de forma consistente como rótulo da OntoPrivacy.
 
@@ -826,7 +826,7 @@ Elas demonstram que a OntoPrivacy não possui três blocos isolados; os `relator
 A utilização dos conjuntos é coerente com a conceituação pretendida e melhora a compreensão do grau de cobertura e exclusividade das especializações.
 
 ---
-
+<!--
 # 11. Pontos fortes consolidados
 
 | Ponto forte                                   | Relevância                                                                     |
@@ -850,7 +850,7 @@ A utilização dos conjuntos é coerente com a conceituação pretendida e melho
 
 # 12. Limites que devem ser declarados, sem modificar a v2
 
-A redação da dissertação deve explicitar que a OntoPrivacy v2:
+A redação da dissertação explicita que a OntoPrivacy v2:
 
 * representa um núcleo selecionado de privacidade de dados;
 * não representa integralmente a LGPD;
@@ -863,19 +863,14 @@ A redação da dissertação deve explicitar que a OntoPrivacy v2:
 * não constitui uma ontologia operacional processável por raciocinador;
 * não pretende esgotar operações, dados sensíveis, direitos, riscos ou controles.
 
-Esses limites são compatíveis com uma ontologia de referência de domínio e não diminuem sua contribuição.
+Esses limites são compatíveis com uma ontologia de referência de domínio e não diminuem a contribuição.
 
 ---
+-->
+# 11. Questões de Competência
+## QC1 - Dados e Classificação
 
-# 13. Questões de Competência recomendadas para a v2
-
-As QCs atualmente registradas no Capítulo 3 ainda incluem Base Legal e atores autorizados/desautorizados, elementos que não pertencem à OntoPrivacy v2. 
-
-Recomenda-se substituir o conjunto atual pelas seguintes questões.
-
-## QC1 — Dados e coleções
-
-> **Quais Dados e Conjuntos de Dados envolvidos em uma situação são classificados como Dado Pessoal, DP Sensível, Dado Pseudonimizado ou Dado Anonimizado, e em quais Bancos de Dados DP estão organizados?**
+> **Quais dados são pessoais, sensíveis, pseudonimizado ou anonimizados?**
 
 Elementos mobilizados:
 
@@ -887,9 +882,9 @@ Elementos mobilizados:
 * Conjunto de Dados;
 * Banco de Dados DP.
 
-## QC2 — Titular e identificabilidade
+## QC2 - Titular e Identificabilidade
 
-> **A quais Titulares cada Dado Pessoal se refere e por qual modalidade de Identificabilidade, direta ou indireta, esse vínculo é sustentado?**
+> **A quem cada dado pessoal se refere e como ocorre a identificação: direta ou indireta?**
 
 Elementos mobilizados:
 
@@ -899,9 +894,9 @@ Elementos mobilizados:
 * Identificabilidade Direta;
 * Identificabilidade Indireta.
 
-## QC3 — Participantes e papéis
+## QC3 - Participantes e Papéis
 
-> **Quais Partes Interessadas participam de cada Tratamento de Dados Pessoais e quais papéis desempenham, como Titular, Controlador, Operador ou Terceiro?**
+> **Quem participa de um tratamento de dado pessoal e qual papel desempenha?**
 
 Elementos mobilizados:
 
@@ -914,9 +909,9 @@ Elementos mobilizados:
 * Operador;
 * Terceiro.
 
-## QC4 — Estrutura e operações do tratamento
+## QC4 - Estrutura, Dados e Operações do tratamento
 
-> **Quais Dados Pessoais são abrangidos por cada TDP, e esse tratamento corresponde a uma Operação de TDP ou a um Conjunto de Operações? Quais tipos específicos de operação o caracterizam ou compõem?**
+> **Quais operações de tratamento são realizadas sobre os dados pessoais?**
 
 Elementos mobilizados:
 
@@ -926,9 +921,9 @@ Elementos mobilizados:
 * tipos específicos de operação;
 * Dado Pessoal.
 
-## QC5 — Finalidade
+## QC5 - Finalidade e Responsbilidade
 
-> **Quais Finalidades orientam cada Tratamento de Dados Pessoais, quais Controladores as definem e a quais Titulares elas são informadas?**
+> **Para qual finalidade o tratamento é realizado, quem a define e a quem é informada?**
 
 Elementos mobilizados:
 
@@ -937,9 +932,9 @@ Elementos mobilizados:
 * Controlador;
 * Titular.
 
-## QC6 — Consentimento
+## QC6 - Consentimento
 
-> **Quando há Consentimento, qual Titular o manifesta, a quais Controladores é dirigido, qual TDP está em seu escopo e a quais Finalidades ele se refere?**
+> **Quem consente com qual tratamento, perante qual controlador e para quais finalidades?**
 
 Elementos mobilizados:
 
@@ -949,9 +944,9 @@ Elementos mobilizados:
 * TDP;
 * Finalidade.
 
-## QC7 — Transformações dos dados
+## QC7 - Transformações dos dados
 
-> **Quais operações de Anonimização ou Pseudonimização abrangem determinados Dados Pessoais, quais dados resultam dessas operações e qual condição de identificabilidade ou anonimidade permanece?**
+> **Que dados resultam da anonimização ou pseudonimização, e qual condição de identificação permanece?**
 
 Elementos mobilizados:
 
@@ -963,6 +958,7 @@ Elementos mobilizados:
 * Anonimidade;
 * Identificabilidade Indireta.
 
+<!--
 ## 13.1 Cobertura conceitual
 
 | QC  | Cobertura pela v2   |
@@ -1049,13 +1045,13 @@ ONTOPRIVACY v2
 │   ├── 🟢 Conjunto de Dados <<collective>>
 │   └── 🟢 Banco de Dados DP <<subkind>>
 │
-├── 4. RELATOR 1 — IDENTIFICABILIDADE
+├── 4. RELATOR 1 - IDENTIFICABILIDADE
 │   ├── 🟢 baseia-se em Dado Pessoal
 │   ├── 🟢 identifica Titular
 │   ├── 🟢 Identificabilidade Direta
 │   └── 🟢 Identificabilidade Indireta
 │
-├── 5. RELATOR 2 — TDP
+├── 5. RELATOR 2 - TDP
 │   ├── 🟢 abrange Dado Pessoal
 │   ├── 🟢 envolve Parte Interessada
 │   ├── 🟢 Controlador é responsável
@@ -1076,7 +1072,7 @@ ONTOPRIVACY v2
 │   ├── 🟢 Anonimização
 │   └── 🟢 Pseudonimização
 │
-├── 7. RELATOR 3 — CONSENTIMENTO
+├── 7. RELATOR 3 - CONSENTIMENTO
 │   ├── 🟢 manifestado por Titular
 │   ├── 🟢 dirigido a Controlador
 │   ├── 🟢 tem TDP em seu escopo
@@ -1136,5 +1132,5 @@ Quando houver manifestação:
              ├── tem o TDP em seu escopo
              └── refere-se às Finalidades
 ```
-
+-->
 ---
