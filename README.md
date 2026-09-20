@@ -2,7 +2,7 @@
 
 # ONTOPRIVACY
 
-## UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE  
+## UMA ONTOLOGIA DE DOMÍNIO PARA O \nENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE\n  
 
 </div>
 
@@ -226,7 +226,7 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 **OntoPrivacy: uma Ontologia de Domínio para enriquecimento semântico de artefatos de Engenharia de Software**  
 OntoPrivacy · Anotação Semântica · GERP
 
-`*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*`  
+*`Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.`*  
 
 <small>*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*</small>  
 <small>*Instituto Federal do Espírito Santo (IFES), Campus Serra*</small>
