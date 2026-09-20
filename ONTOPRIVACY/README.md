@@ -78,13 +78,13 @@ A leitura da OntoPrivacy é organizada por três `relators` centrais:
 ```mermaid
 flowchart LR
     D["Dado"] --> DP["Dado Pessoal"]
-    DP --> I["Identificabilidade\n<i>«relator»</i>"]
+    DP --> I["<i>«relator»</i>\nIdentificabilidade"]
     I --> T["Titular de DP"]
-    DP --> TDP["Tratamento de Dados Pessoais\n<i>«relator»</i>"]
+    DP --> TDP["<i>«relator»</i>\nTratamento de Dados Pessoais"]
     P["Partes interessadas\ne agentes"] --> TDP
     O["Operações de TDP"] --> TDP
-    F["Finalidade\n<i>«mode»</i>"] --> TDP
-    T --> C["Consentimento\n<i>«relator»</i>"]
+    F["<i>«mode»</i>\nFinalidade"] --> TDP
+    T --> C["<i>«relator»</i>\nConsentimento"]
     CTRL["Controlador"] --> C
     TDP --> C
     F --> C
@@ -92,68 +92,103 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
+    %% --------------------------------------------------------
+    %% PALETA DE CORES LÓGICA E ELEGANTE (MATERIAL DESIGN)
+    %% --------------------------------------------------------
+    %% Azul: Objetos passivos e dados
     classDef dado fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#1A1A1A;
-    classDef processo fill:#FFF3E0,stroke:#E65100,stroke-width:2px,color:#1A1A1A;
-    classDef ator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
-    classDef regra fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1A1A1A;
-    classDef relator fill:#FFEBEE,stroke:#C62828,stroke-width:2px,color:#1A1A1A;
+    
+    %% Ciano: Subtipos e operações
+    classDef subkind fill:#E0F7FA,stroke:#00838F,stroke-width:2px,color:#1A1A1A;
+    
+    %% Laranja: Agentes (Pessoas/Organizações)
+    classDef ator fill:#FFF3E0,stroke:#E65100,stroke-width:2px,color:#1A1A1A;
+    
+    %% Verde: Modos e Finalidades
+    classDef mode fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1A1A1A;
+    
+    %% Roxo: Relatores (O "contrato" ou elo que une as partes)
+    classDef relator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
 
-    subgraph G1["<br><b>Domínio do Dado e Titular</b><br>&nbsp;"]
-        direction TB
-        D("fa:fa-database <i>«kind»</i>\n<b>Dado</b>"):::dado
-        DP("fa:fa-id-card <i>«subkind»</i>\n<b>Dado Pessoal</b>"):::dado
-        I("fa:fa-fingerprint <i>«relator»</i>\n<b>Identificabilidade</b>"):::relator
-        T("fa:fa-user <i>«role»</i>\n<b>Titular de DP</b>"):::ator
+    %% --------------------------------------------------------
+    %% AGRUPAMENTO 1: IDENTIFICABILIDADE
+    %% --------------------------------------------------------
+    subgraph G1 ["<b>1. IDENTIFICABILIDADE</b>&nbsp;"]
+        D("<i>«kind»</i>\n<b>Dado</b>"):::dado
+        DP("<i>«role»</i>\n<b>Dado Pessoal</b>"):::dado
+        I("<b>Identificabilidade</b>\n<i>«relator»</i>"):::relator
+        
+        %% Sub-tipos de Identificabilidade
+        IDIR("<i>«subkind»</i>\n<b>Direta</b>"):::subkind
+        IIND("<i>«subkind»</i>\n<b>Indireta</b>"):::subkind
+        
+        T("<i>«role»</i>\n<b>Titular de DP</b>"):::ator
+        
+        %% Conexões Internas do G1
+        D -->DP
+        DP -->|possibilita a| I
+        I -->|pode ser| IDIR
+        I -->|pode ser| IIND
+        I -->|refere-se ao| T
     end
 
-    subgraph G3["<br><b>Agentes de Tratamento</b><br>&nbsp;"]
-        direction TB
-        P("fa:fa-users <i>«category»</i>\n<b>Agentes</b>"):::ator
-        CTRL("fa:fa-building <i>«role»</i>\n<b>Controlador</b>"):::ator
-        OPR("fa:fa-briefcase <i>«role»</i>\n<b>Operador</b>"):::ator
+    %% --------------------------------------------------------
+    %% AGRUPAMENTO 2: TRATAMENTO DE DADOS PESSOAIS
+    %% --------------------------------------------------------
+    subgraph G2 ["<b>2. TRATAMENTO DE DADOS PESSOAIS (TDP)</b>&nbsp;"]
+        TDP("<i>«relator»</i>\n<b>Tratamento de Dados Pessoais (TDP)</b>"):::relator
+        
+        O("<i>«subkind»</i>\n<b>Operação de TDP</b>"):::subkind
+        CO("<i>«subkind»</i>\n<b>Conj. de Operações</b>"):::subkind
+        
+        P("<i>«rolemixin»</i>\n<b>Partes e Agentes</b>"):::ator
+        CTRL("<i>«rolemixin»</i>\n<b>Controlador</b>"):::ator
+        OPR("<i>«rolemixin»</i>\n<b>Operador</b>"):::ator
+        
+        F("<i>«mode»</i>\n<b>Finalidade</b>"):::mode
+        
+        %% Conexões Internas do G2
+        O -->|compõe um| CO
+        O -->|é abrangida pelo| TDP
+        CO -->|é abrangido pelo| TDP
+        
+        CTRL -.->|é tipo de| P
+        OPR -.->|é tipo de| P
+        P -->|envolvidas no| TDP
+        
+        TDP -->|possui uma ou mais| F
     end
 
-    subgraph G2["<br><b>Processamento</b><br>&nbsp;"]
-        direction TB
-        TDP("fa:fa-cogs <i>«relator»</i>\n<b>Tratamento de DP</b>"):::relator
-        O("fa:fa-list-ul <i>«event»</i>\n<b>Operações</b>"):::processo
-        F("fa:fa-bullseye <i>«mode»</i>\n<b>Finalidade</b>"):::regra
+    %% --------------------------------------------------------
+    %% AGRUPAMENTO 3: CONSENTIMENTO
+    %% --------------------------------------------------------
+    subgraph G3 ["<b>3. CONSENTIMENTO</b>&nbsp;"]
+        C("<i>«relator»</i>\n<b>Consentimento</b>"):::relator
     end
 
-    subgraph G4["<br><b>Legitimidade</b><br>&nbsp;"]
-        direction TB
-        C("fa:fa-handshake <i>«relator»</i>\n<b>Consentimento</b>"):::relator
-    end
+    %% --------------------------------------------------------
+    %% CONEXÕES ENTRE OS AGRUPAMENTOS (CROSS-LINKS)
+    %% --------------------------------------------------------
+    
+    %% Ligação Dado Pessoal -> TDP
+    DP -->|é abrangido pelo| TDP
+    
+    %% Ligações do Consentimento
+    T -->|manifesta o| C
+    C -->|é dirigido ao| CTRL
+    C -->|é relativo ao| TDP
+    C -->|determina as| F
 
-    %% Eixo Dado -> Titular
-    D -->|especializa| DP
-    DP -->|possibilita| I
-    I -->|vincula-se ao| T
-    
-    %% Eixo Agentes
-    CTRL -.->|é um| P
-    OPR -.->|é um| P
-    P -->|realizam| TDP
-    
-    %% Eixo Tratamento
-    DP -->|é alvo do| TDP
-    O -->|compõem o| TDP
-    TDP -->|requer| F
-    
-    %% Eixo Base Legal / Consentimento
-    C -.->|é tipo de| BL
-    
-    T -->|concede| C
-    CTRL -->|coleta / gerencia| C
-    F -->|limita o escopo do| C
-
-    %% ESTILO DAS CAIXAS (SUBGRAPHS)
-    style G1 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
-    style G2 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
-    style G3 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
-    style G4 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    %% --------------------------------------------------------
+    %% ESTILIZAÇÃO DAS CAIXAS (CLEAN DESIGN)
+    %% --------------------------------------------------------
+    %% Fundos neutros (cinza super claro) para não ofuscar os nós coloridos
+    style G1 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
+    style G2 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
+    style G3 fill:#F8F9FA,stroke:#B0BEC5,stroke-width:2px,color:#37474F,stroke-dasharray: 5 5,rx:10,ry:10
 ```
+
+[![](https://mermaid.ink/img/pako:eNq9WM1u20YQfpUFgwA2ICkiaUoWGxig-WMQlSVBZIsgVQ8rcSVvSnHVJZnIjnLqoQ9Q9Al6KIoei556i16ss_yxSctWEsMODRj82f1mdma-b3b1XpqxgEi6NA_Zu9kF5gnqjyd8EiG4nj9HzQdeFYiR0bd9A1k2Modj20P97W9nrmkgG9l9-8wY-DY6ODd8e-wafRjluWeDw8f1wLhKQx0Np29IwmK0wnFM38INQQEOWFwOnIXwwSLz7C2a0zDUn9mqozhWI044-4noz2Sto5nt4rH5jgbJha6s1o0ZCxmHz4b4-6YErHhgUhwxHXnpNKGrzDRbEY63f27_JbsOxOn0JxoFpQ9tp-sY1z6028fqsfMAH_qY4-gN1pGxIFFCYnQwInHMcPxiyBc4oleFO4c7_uCE8cIZx3FUu33tjN3R5PZDAvI94QHR0TkLsmg4NMIhhcDfEQ1OFhyXsTh2NLt3bV6xu5aqPMD8mK0hHWMSiqWJUAzRBJgQJRxeTCTEUkRChn5OCUojgrCoGp7cFRueY5ThUW3N0a796xjyac_4HP8eueDPxt-NjHN74A-RrCPXgjvXAdKdun3XMiz7Ec1BsUJ-VhfoTEY_TKSX0xO5dYfFly-mJxPpx3KWuALKySyhLKpIjrisA4ChJx__FiT4-N_LF_RkMokA2AJi5jiHuq4Lmtamjcp5nIXk9jyUF3t4_3z3IPPeDYAddE5neErzksymAFAGnae7QM9wildVqOo9hBho38x5HxC0i19zwnLH5TIKGaitBEKW4Js1FENqCO7A2oPgRsGnMar3_n1R9WmShpiLNVmjG7hPxMJkEVkLmUEuiBCPgFqQnDO5lkkoyhNrVE-ueLeBGMZUxC3BCG-QW1t4MQL8iQnfZKHc-x0CtfudkznhpBkD6dkG-eUAkgfo6Wiq6MgfG37xBM0SSDP00Mj2vKHhek9CWKUgrNLaaxsd-Nbo8AsI7FeoWONLXjegsXgJJGBZ6YgWXJCTxlVTn8Gt4Z5CHxYN9o_MjF8t0Tsq3twHBTX7piVQhjdN-7P5U1OlJV3TqAo9ytoKdMCiKd_PI9Mf9_dCmaJ9sRDiye9HGY7Ge0GyFe5FqN47JdYSWFWFuenn1VxC2X25Mig19zOOzthyBQNRutxA4na_b_9CeAqbnQV4gFbQyDci__V03x7I7h54OwOo2crnCT2Hktig0a3wfmJErmMkesvCt-BejKL9Rv2K8qUUlozF5mQJXNkg56upk6pDyAaeaOrZiyeRI7WQI7VVN3aH8ph79AXqKBYtNpOYe6XkSUIGbtuvtr_DIQf8HtsIRLQSRRBSczz0vGbfHXzrPeYZp7rLp4tC9aq7HtQ8qRZZUVP7y38XVHATRtYCXI7yM8QlnCPmJIbuDFhm-c0srUHDoJkx0VsFnXZGZFmC01nefW-cyQcEBIRhCdoCO_Ki_B83gbbnw371tbH9dfsLdELDQ6bhvjJE5vq2MXia46mTRqIHRiQF_YYWOKPRFQZegBSLcwZnh-L0gVEkssrmaTyDXZeYsP0nRtlRglaOsXFyGRKxGS9OJMdOr3J6PG2f2qZ274lE7R51j64PlyBPF5hzfKkjDWkNvtbldoNfwv9bxpSvaUx9UmNSQ1pAPCU94SlpSEuoNywepffCiYmUXJAlmUg63HISpOtmhj-RJtEHmLrC0WvGluVsztLFhaTPcRjDU7oKcEIsikHvboaAEBFusjRKJF1W1XZDIgEFoTrPf5fJfp7JgCX9vbSW9Kbc6bWUrqKpXUWVj440tSFdSrpypLY68KhoHa0nd3vdDw3pKnNFbrU7xx21d9TtaIqitFX5w_8tajmx?type=png)](https://mermaid.live/edit#pako:eNq9WM1u20YQfpUFgwA2ICkiadoSGxig-WMQlSVBZIsgVQ8rcSVvQnGVJenIjnLqoQ9Q9Al6KIoei556i16ss_yxSctWEsMODRj82f1mdma-b3b1QZqygEi6NAvZ--k55gnqjcZ8HCG4nj9HzQdeFYih0bN9A1k2Mgcj20O9zW-nrmkgG9k9-9To-zbaOzN8e-QaPRjluaf9_cf1wLhKQx0NJm9IwmK0xHFML-CGoAAHLC4HTkP4YJFZ9hbNaBjqz2zVURyrESecvSX6M1k71Mx28dh8T4PkXFeWq8aUhYzDZ0P8fVcCVjwwKY6Yjrx0ktBlZpotCcebPzf_km0H4nTylkZB6UPbOXKMax_a7Y7acR7gQw9zHL3BOjLmJEpIjPaGJI4Zjl8M-BxH9KpwZ3_LH5wwXjjjOI5qt6-dsQ81uf2QgPxIeEB0dMaCLBoOjXBIIfB3RIOTOcdlLDqOZnevzSv2kaUqDzA_YitIx4iEYmkiFAM0BiZECYcXYwmxFJGQoXcpQWlEEBZVw5O7YsNzjDI8qq052rV_h4Z80jW-xL9HLvjT0Q9D48zu-wMk68i14M51gHQnbs-1DMt-RHNQrJCf5Tk6ldFPY-nl5Fhu3WHx5YvJ8Vj6uZwlroByMk0oiyqSIy5rD2Do8ae_BQk-_ffyBT0ejyMAtoCYOc6-ruuCprVpw3IeZyG5PQ_lxR7eP9_dy7x3A2AHndEpntC8JLMpAJRB5-ku0DOc4lUVqnoPIQbaN3PeBwRt49ecsNxRuYxCBmorgZAl-GYNxZAagtu3diC4UfB5jOq9f19UfZqkIeZiTdbwBu4zsTBZRFZCZpALIsQjoBYk51SuZRKK8tga1pMr3q0hhjEVcUswwmvk1hZejAB_YsLXWSh3fodAbX_nZEY4acZAerZGfjmA5AF6OpoqOvJHhl88QbME0gw8NLQ9b2C43pMQVikIq7R22kZ7vjXc_woC-xUq1viS1w1oLF4ACVhWOqIFF-SkcdXUF3BrsKPQB0WD_SMz41dL9I6KN3dBQc2-aQmUwU3T_mL-1FRpQVc0qkIPs7YCHbBoyvfzyPRHvZ1QpmhfLIR48vtRBsPRTpBshTsRqvdOibUAVlVhbvp5NZdQdl-vDErN_YyjU7ZYwkCULtaQuO3vm78QnsBmZw4eoCU08rXIfz3dtweyuwfezgBqtvJ5Qs-hJNZoeCu8nxmR6xiJLlh4Ae7FKNpt1K8oX0phyVhsThbAlTVyvpk6qTqErO-Jpp69eBI5Ugs5Ult1Y3coj7lDX6COYtFiM4m5V0qeJGTgtv1q8zsccsDvkY1ARCtRBCE1RwPPa_bc_vfeY55xqrt8Oi9Ur7rrQc3japEVNbW7_LdBBTdhZC3A5Sg_Q1zAOWJGYujOgGWW38zSGjQMmhkTvVXQaWtEliU4neXd98aZfEBAQBgWoC2wIy_K_3ETaHs-7FdfG5tfN79AJzQ8ZBruK0Nkrmcb_ac5njppJHpgRFLQb2iBUxpdYeAFSLE4Z3C2L04fGEUiq2yWxlPYdYkJm39ilB0laOUYGyeXIRGb8eJE0nG6ldPjSfvENrV7TyTq0cHRwfXhEuTpHHOOL3WkIa3BV7rcbvBL-H_LmPItjalPakxqSHOIp6QnPCUNaQH1hsWj9EE4MZaSc7IgY0mHW06CdNXM8MfSOPoIU5c4es3YopzNWTo_l_QZDmN4SpcBTohFMejdzRAQIsJNlkaJpMuq0mlIJKAgVGf57zLZzzMZsKR_kFaS3lS6By21q3aVdqfbOVCPtIZ0KelKW24daprWVlS5q6pa9-BjQ7rKfJFbyoGstTUNPsiKDEY-_g9qLjne)
 
 ### 1. Identificabilidade
 
