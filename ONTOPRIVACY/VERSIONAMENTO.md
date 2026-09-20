@@ -7,7 +7,7 @@ Este repositório distingue a **numeração acadêmica**, utilizada na disserta�
 | Denominação acadêmica | Arquivo / artefato | Papel |
 |---|---|---|
 | OntoPrivacy v1 | `OntoPrivacy_v1.png` | versão inicial publicada e aplicada nos Estudos I e II |
-| OntoPrivacy v2 | `OntoPrivacy_v2.asta` e `OntoPrivacy_v2.png` | versão conceitual final e congelada da dissertação |
+| OntoPrivacy v2 | `OntoPrivacy_v2.png` | versão conceitual final e congelada da dissertação |
 
 ## 2. Regra de preservação
 
