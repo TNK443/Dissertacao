@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 OntoPrivacy — Ontologia de Privacidade de Dados
+# 🧠 OntoPrivacy - Ontologia de Privacidade de Dados
 
 **Ontologia de referência de domínio para representação conceitual de privacidade de dados e enriquecimento semântico de artefatos de Engenharia de Software**
 
@@ -45,13 +45,13 @@ Leia a política completa em [`VERSIONAMENTO.md`](./VERSIONAMENTO.md).
 
 ---
 
-## 🖼️ Modelo conceitual
+## 🌐 Modelo Conceitual
 
 <p align="center">
-  <img src="./01_MODELO/OntoPrivacy_v2.png" alt="OntoPrivacy v2 — diagrama conceitual" width="1000">
+  <img src="./01_MODELO/OntoPrivacy_v2.png" alt="OntoPrivacy v2 - Diagrama Conceitual" width="1000">
 </p>
 
-> **Legenda acadêmica:** Ontologia de Privacidade de Dados — OntoPrivacy v2.  
+> **Legenda acadêmica:** Ontologia de Privacidade de Dados - OntoPrivacy v2.  
 > **Arquivo técnico:** `OntoPrivacy_v2.png`.
 
 ---
@@ -59,14 +59,14 @@ Leia a política completa em [`VERSIONAMENTO.md`](./VERSIONAMENTO.md).
 ## 🔢 Inventário da versão final
 
 | Elemento | Quantidade |
-|---|---:|
+|---|:---:|
 | Conceitos | **43** |
 | Relações | **21** |
 | Generalizações | **36** |
-| Conjuntos de generalização | **7** |
-| Restrições próprias | **1** |
-| Atributos | **1** |
-| Questões de Competência | **7** |
+| Conjuntos de generalização | **07** |
+| Restrições próprias | **01** |
+| Atributos | **01** |
+| Questões de Competência | **07** |
 | Cenários de validação | **14** |
 
 ---
@@ -78,13 +78,13 @@ A leitura da OntoPrivacy é organizada por três `relators` centrais:
 ```mermaid
 flowchart LR
     D["Dado"] --> DP["Dado Pessoal"]
-    DP --> I["Identificabilidade\n<<relator>>"]
+    DP --> I["Identificabilidade\n<i>«relator»</i>"]
     I --> T["Titular de DP"]
-    DP --> TDP["Tratamento de Dados Pessoais\n<<relator>>"]
+    DP --> TDP["Tratamento de Dados Pessoais\n<i>«relator»</i>"]
     P["Partes interessadas\ne agentes"] --> TDP
     O["Operações de TDP"] --> TDP
-    F["Finalidade\n<<mode>>"] --> TDP
-    T --> C["Consentimento\n<<relator>>"]
+    F["Finalidade\n<i>«mode»</i>"] --> TDP
+    T --> C["Consentimento\n<i>«relator»</i>"]
     CTRL["Controlador"] --> C
     TDP --> C
     F --> C
@@ -101,30 +101,29 @@ flowchart LR
 
     subgraph G1["<br><b>Domínio do Dado e Titular</b><br>&nbsp;"]
         direction TB
-        D("fa:fa-database <b>Dado</b>\n<i>«kind»</i>"):::dado
-        DP("fa:fa-id-card <b>Dado Pessoal</b>\n<i>«subkind»</i>"):::dado
-        I("fa:fa-fingerprint <b>Identificabilidade</b>\n<i>«relator»</i>"):::relator
-        T("fa:fa-user <b>Titular de DP</b>\n<i>«role»</i>"):::ator
+        D("fa:fa-database <i>«kind»</i>\n<b>Dado</b>"):::dado
+        DP("fa:fa-id-card <i>«subkind»</i>\n<b>Dado Pessoal</b>"):::dado
+        I("fa:fa-fingerprint <i>«relator»</i>\n<b>Identificabilidade</b>"):::relator
+        T("fa:fa-user <i>«role»</i>\n<b>Titular de DP</b>"):::ator
     end
 
     subgraph G3["<br><b>Agentes de Tratamento</b><br>&nbsp;"]
         direction TB
-        P("fa:fa-users <b>Agentes</b>\n<i>«category»</i>"):::ator
-        CTRL("fa:fa-building <b>Controlador</b>\n<i>«role»</i>"):::ator
-        OPR("fa:fa-briefcase <b>Operador</b>\n<i>«role»</i>"):::ator
+        P("fa:fa-users <i>«category»</i>\n<b>Agentes</b>"):::ator
+        CTRL("fa:fa-building <i>«role»</i>\n<b>Controlador</b>"):::ator
+        OPR("fa:fa-briefcase <i>«role»</i>\n<b>Operador</b>"):::ator
     end
 
     subgraph G2["<br><b>Processamento</b><br>&nbsp;"]
         direction TB
-        TDP("fa:fa-cogs <b>Tratamento de DP</b>\n<i>«relator»</i>"):::relator
-        O("fa:fa-list-ul <b>Operações</b>\n<i>«event»</i>"):::processo
-        F("fa:fa-bullseye <b>Finalidade</b>\n<i>«mode»</i>"):::regra
+        TDP("fa:fa-cogs <i>«relator»</i>\n<b>Tratamento de DP</b>"):::relator
+        O("fa:fa-list-ul <i>«event»</i>\n<b>Operações</b>"):::processo
+        F("fa:fa-bullseye <i>«mode»</i>\n<b>Finalidade</b>"):::regra
     end
 
     subgraph G4["<br><b>Legitimidade</b><br>&nbsp;"]
         direction TB
-        BL("fa:fa-balance-scale <b>Base Legal</b>\n<i>«category»</i>"):::regra
-        C("fa:fa-handshake <b>Consentimento</b>\n<i>«relator»</i>"):::relator
+        C("fa:fa-handshake <i>«relator»</i>\n<b>Consentimento</b>"):::relator
     end
 
     %% Eixo Dado -> Titular
@@ -143,7 +142,6 @@ flowchart LR
     TDP -->|requer| F
     
     %% Eixo Base Legal / Consentimento
-    TDP -->|fundamenta-se em| BL
     C -.->|é tipo de| BL
     
     T -->|concede| C
@@ -270,7 +268,7 @@ flowchart TD
     V1 --> GERPD["GERPD v1.0"]
     AS --> EI["Estudo I: API Pix"]
     GERPD --> EII["Estudo II: Tibico"]
-    V1 -->|evolução| V2["OntoPrivacy v2 (Versão Final)"]
+    V1 -->|evolução| V2["OntoPrivacy v2\n(Versão Final)"]
 ```
 
 A pasta `ONTOPRIVACY/` documenta a versão final. As aplicações históricas permanecem nos diretórios [`../ANOTACAO_SEMANTICA/`](../ANOTACAO_SEMANTICA/) e [`../GERPD/`](../GERPD/).
