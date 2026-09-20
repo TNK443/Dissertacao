@@ -21,11 +21,11 @@ Distingue tipos fundamentais que fornecem princípio de identidade daqueles que 
 
 ### Rigidez
 
-Distingue classificações essenciais de classificações contingentes. Uma pessoa não deixa de ser Pessoa Natural sem perder sua identidade; porém, pode deixar de desempenhar o papel de Titular em determinado contexto.
+Distingue classificações essenciais de classificações contingentes. Uma pessoa não deixa de ser `Pessoa Natural` sem perder sua identidade; porém, pode deixar de desempenhar o papel de `Titular de DP` em determinado contexto.
 
 ### Dependência
 
-Explicita a necessidade de um portador ou de participantes relacionais. Finalidade depende de um TDP; Consentimento depende de Titular, Controlador, TDP e Finalidades.
+Explicita a necessidade de um portador ou de participantes relacionais. `Finalidade` depende de um `Tratamento de DP`; `Consentimento` depende de `Titular de DP`, `Controlador`, `Tratamento de DP` e `Finalidades`.
 
 ## 3. OntoUML
 
@@ -35,44 +35,44 @@ Explicita a necessidade de um portador ou de participantes relacionais. Finalida
 
 | Estereótipo | Natureza | Exemplos |
 |---|---|---|
-| `kind` | tipo fundamental | Dado; Pessoa Natural; Pessoa Jurídica |
-| `subkind` | especialização rígida | Entidade Organizacional; Coleta; Anonimização |
-| `role` | papel relacional de um único provedor de identidade | Dado Pessoal; Titular de DP; Dado Pseudonimizado |
-| `roleMixin` | papel comum a entidades com identidades distintas | Controlador; Operador; Terceiro; Parte Interessada |
-| `category` | abstração rígida para múltiplos tipos fundamentais | Agente Legal |
-| `relator` | entidade relacional | Identificabilidade; TDP; Consentimento |
-| `mode` | propriedade intrínseca dependente | Finalidade; Anonimidade |
-| `collective` | coletivo de membros | Conjunto de Dados |
+| `kind` | tipo fundamental | `Dado`; `Pessoa Natural`; `Pessoa Jurídica` |
+| `subkind` | especialização rígida | `Entidade Organizacional`; `Coleta`; `Anonimização` |
+| `role` | papel relacional de um único provedor de identidade | `Dado Pessoal`; `Titular de DP`; `Dado Pseudonimizado` |
+| `roleMixin` | papel comum a entidades com identidades distintas | `Controlador`; `Operador`; `Terceiro`; `Parte Interessada na Privacidade` |
+| `category` | abstração rígida para múltiplos tipos fundamentais | `Agente Legal` |
+| `relator` | entidade relacional | `Identificabilidade`; `Tratamento de DP`; `Consentimento` |
+| `mode` | propriedade intrínseca dependente | `Finalidade`; `Anonimidade` |
+| `collective` | coletivo de membros | `Conjunto de Dados` |
 
 ## 5. Relações empregadas
 
 | Relação | Leitura na OntoPrivacy |
 |---|---|
-| `mediation` | TDP abrange Dados Pessoais; Identificabilidade identifica Titular |
-| `material` | Dado Pessoal refere-se a Titular; Controlador instrui Operador |
-| `characterization` | Finalidade caracteriza TDP; Anonimidade caracteriza Dado Anonimizado |
-| `memberOf` | Dado integra Conjunto de Dados |
+| `mediation` | `TDP` abrange `Dados Pessoais`; `Identificabilidade` identifica `Titular de DP` |
+| `material` | `Dado Pessoal` refere-se a `Titular de DP`; `Controlador` instrui `Operador` |
+| `characterization` | `Finalidade` caracteriza `TDP`; `Anonimidade` caracteriza `Dado Anonimizado` |
+| `memberOf` | `Dado` integra `Conjunto de Dados` |
 
 ## 6. Os três `relators`
 
 ### Identificabilidade
 
-Reifica a relação pela qual Dados Pessoais permitem identificar um Titular. Sua existência evita tratar “ser pessoal” apenas como atributo intrínseco do dado.
+Reifica a relação pela qual `Dados Pessoais` permitem identificar um `Titular de DP`. Sua existência evita tratar “ser pessoal” apenas como atributo intrínseco do dado.
 
 ### Tratamento de Dados Pessoais
 
-Reifica a situação na qual dados, participantes, operações e Finalidades estão relacionados. As operações específicas são `subkind`s desse relator.
+Reifica a situação na qual dados, participantes, operações e Finalidades estão relacionados. As operações específicas são `subkind`s desse `relator`.
 
 ### Consentimento
 
-Reifica a manifestação do Titular perante Controladores em relação a um TDP e a Finalidades determinadas.
+Reifica a manifestação do `Titular do DP` perante `Controladores` em relação a um `TDP` e a `Finalidades` determinadas.
 
 ## 7. Conjuntos de generalização
 
-- `{disjoint}` — subclasses mutuamente exclusivas;
-- `{complete}` — subclasses cobrem integralmente o supertipo;
-- `{overlapping}` — uma instância pode pertencer a mais de uma subclasse;
-- `{incomplete}` — outras subclasses podem existir.
+- `{disjoint}` - subclasses mutuamente exclusivas;
+- `{complete}` - subclasses cobrem integralmente o supertipo;
+- `{overlapping}` - uma instância pode pertencer a mais de uma subclasse;
+- `{incomplete}` - outras subclasses podem existir.
 
 ## 8. Limites assumidos
 
@@ -80,7 +80,7 @@ A versão atual mantém alguns aspectos para evolução futura, como relações 
 
 ## Referências principais
 
-- GUIZZARDI, G. Ontological Foundations for Structural Conceptual Models. 2005.
-- GUIZZARDI, G. et al. Towards Ontological Foundations for Conceptual Modeling: The Unified Foundational Ontology (UFO) Story. 2015.
-- GUIZZARDI, G. et al. UFO: Unified Foundational Ontology. Applied Ontology, 2022.
+- GUIZZARDI, G. **Ontological Foundations for Structural Conceptual Models**. 2005.
+- GUIZZARDI, G. et al. **Towards Ontological Foundations for Conceptual Modeling: The Unified Foundational Ontology (UFO) Story**. 2015.
+- GUIZZARDI, G. et al. **UFO: Unified Foundational Ontology. Applied Ontology**, 2022.
 - OntoUML Specification Documentation.
