@@ -1,6 +1,6 @@
 <div align="center">
 
-# Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software
+# ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
 
 </div>
 
@@ -19,11 +19,12 @@
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043?style=flat-square)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb?style=flat-square)
 
-> **Título do Trabalho:** [Insira aqui o Título da sua Dissertação]  
-> **Autor:** [Seu Nome Completo]  
-> **Orientador:** [Nome do Orientador]  
-> **Instituição:** Instituto Federal do Espírito Santo (Ifes) — Campus Serra  
-> **Programa:** Programa de Pós-Graduação em Computação Aplicada (PPComp) — Mestrado Profissional em Computação Aplicada  
+> **Título do Trabalho:** ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
+> **Autor:** DORNELIO MORI JUNIOR
+> **Orientador:** PROF. DR. FABIANO BORGES RUY
+> **Instituição:** INSTITUTO FEDERAL DO ESPÍRITO SANTO (IFES) — CAMPUS SERRA
+> **Programa:** PROGRAMA DE PÓS-GRADUAÇÃO EM COMPUTAÇÃO APLICADA (PPCOMP) — MESTRADO PROFISSIONAL EM COMPUTAÇÃO APLICADA
+> **Linha de Pesquisa:** INTELIGÊNCIA ARTIFICIAL
 > **Ano:** 2026
 
 ---
@@ -32,7 +33,7 @@
 
 Este repositório reúne todo o material suplementar, artefatos técnicos, dados, códigos e documentação complementar desenvolvidos e utilizados na elaboração da dissertação de mestrado descrita acima
 
-Repositório de apoio aos artefatos, materiais de aplicação e evidências produzidos no desenvolvimento de uma dissertação de mestrado no IFES, situada na interseção entre **Ontologias**, **Privacidade de Dados**, **LGPD** e **Engenharia de Software**.
+Repositório de apoio aos artefatos, materiais de aplicação e evidências produzidos no desenvolvimento da dissertação de mestrado no IFES, situada na interseção entre **Ontologias**, **Privacidade de Dados**, **LGPD** e **Engenharia de Software**.
 
 O objetivo deste repositório é promover a **transparência, reprodutibilidade e continuidade** da pesquisa acadêmica realizada.
 
@@ -53,17 +54,55 @@ flowchart LR
     OP2 --> DOC["Catálogo, QCs,\nrastreabilidade e validação conceitual"]
 ```
 
-| Artefato / eixo | Papel na dissertação | Base ontológica | Aplicação | Diretório |
+```mermaid
+flowchart LR
+    %% Definição de estilos (cores) para facilitar a leitura
+    classDef ontologia fill:#d4e157,stroke:#333,stroke-width:2px,color:#000;
+    classDef aplicacao fill:#81d4fa,stroke:#333,stroke-width:2px,color:#000;
+    classDef estudo fill:#ffcc80,stroke:#333,stroke-width:2px,color:#000;
+    classDef doc fill:#cfd8dc,stroke:#333,stroke-width:2px,color:#000;
+
+    %% Nós de Ontologia (formato de banco de dados/cilindro)
+    OP1[("OntoPrivacy v1\n(Versão Histórica)")]:::ontologia
+    OP2[("OntoPrivacy v2\n(Versão Final)")]:::ontologia
+
+    %% Agrupamento das Aplicações
+    subgraph FASE 1: Aplicações
+        AS["Anotação Semântica\n(OpenAPI / Web Services)"]:::aplicacao
+        G["GERPD v1.0\n(Engenharia de Requisitos)"]:::aplicacao
+    end
+
+    %% Agrupamento dos Estudos de Caso
+    subgraph FASE 2: Estudos Empíricos
+        E1{{"Estudo I: API Pix"}}:::estudo
+        E2{{"Estudo II: Tibico + ChatGPT"}}:::estudo
+    end
+
+    %% Documentação (formato de documento)
+    DOC[/"Catálogo, QCs, Rastreabilidade\ne Validação Conceitual"/]:::doc
+
+    %% Conexões com Rótulos
+    OP1 -->|Utilizada na| AS
+    OP1 -->|Integrada ao| G
+    
+    AS -->|Validada no| E1
+    G -->|Validado no| E2
+    
+    OP1 -->|Evolução\nConceitual| OP2
+    OP2 -->|Resulta em| DOC
+```
+
+| Artefato | Papel na Dissertação | Base Ontológica | Aplicação | Diretório |
 |---|---|---|---|---|
-| **OntoPrivacy v2** | Seção 3.1 — ontologia final de referência | versão conceitual final | não aplicada retroativamente aos estudos | [`OntoPrivacy/`](./OntoPrivacy/) |
-| **Anotação Semântica** | Seção 3.2 — OE02(a) | OntoPrivacy v1 | Estudo I — API Pix / OE03 | [`ANOTACAO_SEMANTICA/`](./ANOTACAO_SEMANTICA/) |
-| **GERPD v1.0** | Seção 3.3 — OE02(b) | OntoPrivacy v1 | Estudo II — Tibico + ChatGPT / OE04 | [`GERPD/`](./GERPD/) |
+| **OntoPrivacy** | Seção 3.1 -- Ontologia de Referência de Domínio / OE01 | Versão Conceitual Final | Anotação Semântica / GERPD | [`OntoPrivacy/`](./OntoPrivacy/) |
+| **Anotação Semântica** | Seção 3.2 -- OE02(a) | OntoPrivacy | Estudo I -- API Pix / OE03 | [`ANOTACAO_SEMANTICA/`](./ANOTACAO_SEMANTICA/) |
+| **GERPD v1.0** | Seção 3.3 -- OE02(b) | OntoPrivacy | Estudo II -- Tibico + ChatGPT / OE04 | [`GERPD/`](./GERPD/) |
 
 > [!NOTE]
 > Na dissertação, a versão final congelada é denominada **OntoPrivacy v2**.
-> O trabalho tem como objetivo geral desenvolver uma ontologia de domínio para privacidade de dados e utilizá-la como fundamentação no **enriquecimento semântico de artefatos de Engenharia de Software**. A pesquisa investiga duas formas complementares de aplicação:
+> O trabalho tem como objetivo geral desenvolver uma **Ontologia de Referência de Domínio** de privacidade de dados e utilizá-la como fundamentação no **enriquecimento semântico de artefatos de Engenharia de Software**. A pesquisa investiga duas formas complementares de aplicação:
 >
-> 1. anotação semântica de descrições **OpenAPI / Web Services**;
+> 1. anotação semântica de descrições **Web Services / REST / OpenAPI**;
 > 2. apoio à **Engenharia de Requisitos de Privacidade de Dados** por meio do GERPD.
 
 ---
@@ -100,7 +139,7 @@ flowchart LR
 
 ### [`OntoPrivacy/`](./OntoPrivacy/)
 
-Reúne a **versão conceitual final da ontologia**, o diagrama, a documentação metodológica, o Catálogo OntoPrivacy, as Questões de Competência, os cenários de validação e as matrizes de rastreabilidade.
+Reúne a **versão conceitual final da Ontologia de Domínio**, o diagrama, a documentação metodológica, o Catálogo OntoPrivacy, as Questões de Competência, os cenários de validação e as matrizes de rastreabilidade.
 
 ### [`ANOTACAO_SEMANTICA/`](./ANOTACAO_SEMANTICA/)
 
@@ -114,7 +153,7 @@ Reúne o GERPD v1.0, seus templates e figuras, bem como o pacote completo do Est
 
 ## 🧠 OntoPrivacy em síntese
 
-A **OntoPrivacy v2** é uma ontologia de referência de domínio, em nível conceitual, fundamentada principalmente na **LGPD** e na **ABNT NBR ISO/IEC 29100:2020**, desenvolvida com apoio do **SABiO**, fundamentada em **UFO** e representada em **OntoUML**.
+A **OntoPrivacy** é uma ontologia de referência de domínio, em nível conceitual, fundamentada principalmente na **LGPD** e na **ABNT NBR ISO/IEC 29100:2020**, desenvolvida com apoio do **SABiO**, fundamentada em **UFO** e representada em **OntoUML**.
 
 Sua arquitetura é organizada por três entidades relacionais centrais:
 
@@ -168,9 +207,11 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 
 <div align="center">
 
-**Dissertação: OntoPrivacy, Privacidade de Dados e Engenharia de Software**  
+**OntoPrivacy: uma Ontologia de Domínio para enriquecimento semântico de artefatos de Engenharia de Software**  
 **OntoPrivacy · Anotação Semântica · GERP**
 
-*Material complementar de pesquisa acadêmica — versão 1.0, agosto de 2026.*
+*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*
+*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*
+*Instituto Federal do Espírito Santo (IFES), Campus Serra*
 
 </div>
