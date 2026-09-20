@@ -1,8 +1,8 @@
-# OntoPrivacy — Descrição conceitual e documental
+# OntoPrivacy - Descrição conceitual e documental
 
 ## 1. Identificação
 
-- **Nome:** OntoPrivacy — Ontologia de Privacidade de Dados.
+- **Nome:** OntoPrivacy - Ontologia de Privacidade de Dados.
 - **Natureza:** ontologia de referência de domínio.
 - **Nível:** conceitual.
 - **Versão acadêmica final:** OntoPrivacy v2.
@@ -72,7 +72,7 @@ A v2 não foi aplicada retroativamente aos estudos.
 
 ### Fontes normativas principais
 
-- **Lei nº 13.709/2018 — LGPD:** ancoragem normativa brasileira, incluindo dados pessoais, dados sensíveis, dados anonimizados, titular, agentes, Consentimento, Finalidade, tratamento e operações.
+- **Lei nº 13.709/2018 - LGPD:** ancoragem normativa brasileira, incluindo dados pessoais, dados sensíveis, dados anonimizados, titular, agentes, Consentimento, Finalidade, tratamento e operações.
 - **ABNT NBR ISO/IEC 29100:2020:** complementação técnica e terminológica, incluindo atores, papéis, tratamento, identificabilidade, anonimização e pseudonimização.
 
 ### Fundamentação metodológica e ontológica
