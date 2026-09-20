@@ -2,8 +2,8 @@
 
 Este diretório contém a linha de base técnica congelada da versão final da ontologia:
 
-- `OntoPrivacy_v2.asta` — modelo editável no Astah;
-- `OntoPrivacy_v2.png` — exportação visual do diagrama único.
+- `OntoPrivacy_v2.asta` - modelo editável no Astah;
+- `OntoPrivacy_v2.png` - exportação visual do diagrama único.
 
 Na dissertação e na documentação pública, esses arquivos correspondem à **OntoPrivacy v2**. Consulte [`../VERSIONAMENTO.md`](../VERSIONAMENTO.md).
 
