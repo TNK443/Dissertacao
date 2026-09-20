@@ -1,6 +1,7 @@
 <div align="center">
 
-# ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
+# ONTOPRIVACY:
+## UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
 
 </div>
 
@@ -19,12 +20,12 @@
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043?style=flat-square)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb?style=flat-square)
 
-> **Título do Trabalho:** ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
-> **Autor:** DORNELIO MORI JUNIOR
-> **Orientador:** PROF. DR. FABIANO BORGES RUY
-> **Instituição:** INSTITUTO FEDERAL DO ESPÍRITO SANTO (IFES) — CAMPUS SERRA
-> **Programa:** PROGRAMA DE PÓS-GRADUAÇÃO EM COMPUTAÇÃO APLICADA (PPCOMP) — MESTRADO PROFISSIONAL EM COMPUTAÇÃO APLICADA
-> **Linha de Pesquisa:** INTELIGÊNCIA ARTIFICIAL
+> **Título do Trabalho:** ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE  
+> **Autor:** DORNELIO MORI JUNIOR  
+> **Orientador:** PROF. DR. FABIANO BORGES RUY  
+> **Instituição:** INSTITUTO FEDERAL DO ESPÍRITO SANTO (IFES) — CAMPUS SERRA  
+> **Programa:** PROGRAMA DE PÓS-GRADUAÇÃO EM COMPUTAÇÃO APLICADA (PPCOMP) — MESTRADO PROFISSIONAL EM COMPUTAÇÃO APLICADA  
+> **Linha de Pesquisa:** INTELIGÊNCIA ARTIFICIAL  
 > **Ano:** 2026
 
 ---
@@ -46,57 +47,71 @@ O objetivo deste repositório é promover a **transparência, reprodutibilidade 
 
 ```mermaid
 flowchart LR
-    OP1["OntoPrivacy v1\nversão histórica aplicada"] --> AS["Anotação Semântica\nOpenAPI / Web Services"]
-    OP1 --> G["GERPD v1.0\nEngenharia de Requisitos"]
-    AS --> E1["Estudo I\nAPI Pix"]
-    G --> E2["Estudo II\nTibico + ChatGPT"]
-    OP1 -->|evolução conceitual| OP2["OntoPrivacy v2\nversão final da dissertação"]
-    OP2 --> DOC["Catálogo, QCs,\nrastreabilidade e validação conceitual"]
-```
+    %% Definição de estilos (ClassDef)
+    %% Ontologia: Tons de Verde
+    classDef ontologia fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1A1A1A;
+    classDef ontologiav1 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px,stroke-dasharray: 5 5,color:#1A1A1A;
+    classDef ontologiav2 fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1A1A1A;
+    
+    %% Propostas: Tons de Azul (Tecnologia/Engenharia)
+    classDef proposta fill:#BBDEFB,stroke:#1565C0,stroke-width:2px,color:#1A1A1A;
+    
+    %% Estudos de Caso: Tons de Roxo (Validação/Aplicação)
+    classDef estudo fill:#D1C4E9,stroke:#4527A0,stroke-width:2px,color:#1A1A1A;
+    
+    %% Documentação: Cor solicitada #cfd8dc (Cinza/Azulado)
+    classDef doc fill:#cfd8dc,stroke:#546E7A,stroke-width:2px,color:#1A1A1A;
 
-```mermaid
-flowchart LR
-    %% Definição de estilos (cores) para facilitar a leitura
-    classDef ontologia fill:#d4e157,stroke:#333,stroke-width:2px,color:#000;
-    classDef aplicacao fill:#81d4fa,stroke:#333,stroke-width:2px,color:#000;
-    classDef estudo fill:#ffcc80,stroke:#333,stroke-width:2px,color:#000;
-    classDef doc fill:#cfd8dc,stroke:#333,stroke-width:2px,color:#000;
+    %% Nós de Ontologia
+    OP0("fa:fa-sitemap <b>ONTOPRIVACY</b>"):::ontologia
 
-    %% Nós de Ontologia (formato de banco de dados/cilindro)
-    OP1[("OntoPrivacy v1\n(Versão Histórica)")]:::ontologia
-    OP2[("OntoPrivacy v2\n(Versão Final)")]:::ontologia
+    %% Agrupamento das Ontologias
+    subgraph F1["<br><b>FASE 1: Ontologia de Domínio</b><br>"]
+        OP1("fa:fa-code-branch OntoPrivacy v1\n(Versão Inicial)"):::ontologiav1
+        OP2("fa:fa-cube <b>OntoPrivacy v2</b>\n(Versão Final)"):::ontologiav2
+    end
+    %% Documentação
+    DOC[/"fa:fa-book Catálogo, QCs, Rastreabilidade\ne Validação Conceitual"/]:::doc
 
-    %% Agrupamento das Aplicações
-    subgraph FASE 1: Aplicações
-        AS["Anotação Semântica\n(OpenAPI / Web Services)"]:::aplicacao
-        G["GERPD v1.0\n(Engenharia de Requisitos)"]:::aplicacao
+    %% Agrupamento das Propostas Desenvolvidas
+    subgraph F2["<br><b>FASE 2: Propostas</b><br>"]
+        AS("fa:fa-network-wired Anotação Semântica\n(OpenAPI / Web Services)"):::proposta
+        G("fa:fa-clipboard-list GERPD v1.0\n(Engenharia de Requisitos)"):::proposta
     end
 
     %% Agrupamento dos Estudos de Caso
-    subgraph FASE 2: Estudos Empíricos
-        E1{{"Estudo I: API Pix"}}:::estudo
-        E2{{"Estudo II: Tibico + ChatGPT"}}:::estudo
+    subgraph F3["<br><b>FASE 3: Estudos / Aplicações</b><br>"]
+        E1{{"fa:fa-qrcode Estudo I: API Pix"}}:::estudo
+        E2{{"fa:fa-robot Estudo II: Tibico + ChatGPT"}}:::estudo
     end
 
-    %% Documentação (formato de documento)
-    DOC[/"Catálogo, QCs, Rastreabilidade\ne Validação Conceitual"/]:::doc
-
-    %% Conexões com Rótulos
-    OP1 -->|Utilizada na| AS
-    OP1 -->|Integrada ao| G
+    %% CONEXÕES COM RÓTULOS
+    OP0 -->|Utilizada na| AS
+    OP0 -->|Integrada ao| G
     
+
     AS -->|Validada no| E1
     G -->|Validado no| E2
     
     OP1 -->|Evolução\nConceitual| OP2
     OP2 -->|Resulta em| DOC
+    OP0 <--> F1
+
+    %% Estilização visual dos Agrupamentos (Subgraphs)
+    %% rx:10,ry:10 arredondam os cantos da caixa principal
+    %% F1 - Fundo verde super claro, borda arredondada verde média
+    style F1 fill:#F1F8E9,stroke:#81C784,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    %% F2 - Fundo azul super claro, borda arredondada azul média
+    style F2 fill:#E3F2FD,stroke:#64B5F6,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    %% F3 - Fundo roxo super claro, borda arredondada roxa média
+    style F3 fill:#F3E5F5,stroke:#BA68C8,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
 ```
 
-| Artefato | Papel na Dissertação | Base Ontológica | Aplicação | Diretório |
-|---|---|---|---|---|
-| **OntoPrivacy** | Seção 3.1 -- Ontologia de Referência de Domínio / OE01 | Versão Conceitual Final | Anotação Semântica / GERPD | [`OntoPrivacy/`](./OntoPrivacy/) |
-| **Anotação Semântica** | Seção 3.2 -- OE02(a) | OntoPrivacy | Estudo I -- API Pix / OE03 | [`ANOTACAO_SEMANTICA/`](./ANOTACAO_SEMANTICA/) |
-| **GERPD v1.0** | Seção 3.3 -- OE02(b) | OntoPrivacy | Estudo II -- Tibico + ChatGPT / OE04 | [`GERPD/`](./GERPD/) |
+| 🧩 Artefato | 📖 Papel na Dissertação | 🔗 Base Ontológica | 🎯 Aplicação | 📂 Diretório |
+| :---: | :--- | :---: | :--- | :--- |
+| **OntoPrivacy** | Seção 3.1 / Ontologia de Referência de Domínio (OE01) | Versão Conceitual | "- Anotação Semântica<br>- GERPD" | [`/OntoPrivacy`](./OntoPrivacy/) |
+| **Anotação Semântica** | Seção 3.2 / OE02(a) | OntoPrivacy | Estudo I: API Pix (OE03) | [`/ANOTACAO_SEMANTICA`](./ANOTACAO_SEMANTICA/) |
+| **GERPD v1.0** | Seção 3.3 / OE02(b) | OntoPrivacy | Estudo II: Tibico + ChatGPT (OE04) | [`/GERPD`](./GERPD/) |
 
 > [!NOTE]
 > Na dissertação, a versão final congelada é denominada **OntoPrivacy v2**.
@@ -208,10 +223,10 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 <div align="center">
 
 **OntoPrivacy: uma Ontologia de Domínio para enriquecimento semântico de artefatos de Engenharia de Software**  
-**OntoPrivacy · Anotação Semântica · GERP**
+OntoPrivacy · Anotação Semântica · GERP
 
-*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*
-*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*
+*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*  
+*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*  
 *Instituto Federal do Espírito Santo (IFES), Campus Serra*
 
 </div>
