@@ -1,6 +1,6 @@
-# Changelog — OntoPrivacy
+# Changelog - OntoPrivacy
 
-## OntoPrivacy v2 — versão final da dissertação
+## OntoPrivacy v2 - versão final da dissertação
 
 **Identificador técnico:** v2  
 **Estado:** congelada
@@ -19,7 +19,7 @@ Principais evoluções em relação à v1:
 - revisão de sete Questões de Competência;
 - validação conceitual com 14 cenários.
 
-## OntoPrivacy v1 — versão inicial
+## OntoPrivacy v1 - versão inicial
 
 **Estado:** histórica e preservada
 
