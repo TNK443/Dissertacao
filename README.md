@@ -2,7 +2,7 @@
 
 # ONTOPRIVACY
 
-## UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE
+## UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE  
 
 </div>
 
@@ -21,12 +21,12 @@
 ![EstudoII](https://img.shields.io/badge/Estudo%20II-v1.0-2ea043?style=flat-square)
 ![GERPD](https://img.shields.io/badge/GERPD-v1.0-1f6feb?style=flat-square)
 
-> **Título do Trabalho:** ONTOPRIVACY: UMA ONTOLOGIA DE DOMÍNIO PARA O ENRIQUECIMENTO SEMÂNTICO DE ARTEFATOS DE ENGENHARIA DE SOFTWARE  
-> **Autor:** DORNELIO MORI JUNIOR  
-> **Orientador:** PROF. DR. FABIANO BORGES RUY  
-> **Instituição:** INSTITUTO FEDERAL DO ESPÍRITO SANTO (IFES) — CAMPUS SERRA  
-> **Programa:** PROGRAMA DE PÓS-GRADUAÇÃO EM COMPUTAÇÃO APLICADA (PPCOMP) — MESTRADO PROFISSIONAL EM COMPUTAÇÃO APLICADA  
-> **Linha de Pesquisa:** INTELIGÊNCIA ARTIFICIAL  
+> **Título do Trabalho:** OntoPrivacy: uma Ontologia de Domínio para o enriquecimento semântico de artefatos de Engenharia de Software.  
+> **Autor:** Dornelio Mori Junior  
+> **Orientador:** Prof. Dr. Fabiano Borges Ruy  
+> **Instituição:** Instituto Federal do Espírito Santo (IFES) - CAMPUS SERRA  
+> **Programa:** Programa de Pós-Graduação em Computação Aplicada (PPCOMP) - Mestrado Profissional em Computação Aplicada  
+> **Linha de Pesquisa:** Inteligência Artificial  
 > **Ano:** 2026
 
 ---
@@ -129,7 +129,7 @@ flowchart LR
 /Dissertacao/
 ├── README.md
 ├── .gitignore
-├── OntoPrivacy/
+├── ONTOPRIVACY/
 │   ├── README.md
 │   ├── ONTOPRIVACY.md
 │   ├── VERSIONAMENTO.md
@@ -153,7 +153,7 @@ flowchart LR
     └── EstudoII/
 ```
 
-### [`OntoPrivacy/`](./OntoPrivacy/)
+### [`ONTOPRIVACY/`](./ONTOPRIVACY/)
 
 Reúne a **versão conceitual final da Ontologia de Domínio**, o diagrama, a documentação metodológica, o Catálogo OntoPrivacy, as Questões de Competência, os cenários de validação e as matrizes de rastreabilidade.
 
@@ -179,7 +179,7 @@ Sua arquitetura é organizada por três entidades relacionais centrais:
 
 A documentação pública inclui **43 conceitos**, **21 relações**, **7 conjuntos de generalização**, **7 Questões de Competência** e **14 cenários de validação conceitual**.
 
-➡️ Comece em [`OntoPrivacy/README.md`](./OntoPrivacy/README.md).
+➡️ Comece em [`ONTOPRIVACY/README.md`](./ONTOPRIVACY/README.md).
 
 ---
 
@@ -197,10 +197,10 @@ A documentação pública inclui **43 conceitos**, **21 relações**, **7 conjun
 
 ## 🔎 Como navegar
 
-1. Para compreender a ontologia final, consulte [`OntoPrivacy/README.md`](./OntoPrivacy/README.md).
-2. Para uma descrição acadêmica detalhada, leia [`OntoPrivacy/ONTOPRIVACY.md`](./OntoPrivacy/ONTOPRIVACY.md).
-3. Para examinar o modelo, acesse [`OntoPrivacy/01_MODELO/`](./OntoPrivacy/01_MODELO/).
-4. Para estudar SABiO, UFO e OntoUML, acesse [`OntoPrivacy/02_METODOLOGIA/`](./OntoPrivacy/02_METODOLOGIA/).
+1. Para compreender a ontologia final, consulte [`ONTOPRIVACY/README.md`](./ONTOPRIVACY/README.md).
+2. Para uma descrição acadêmica detalhada, leia [`ONTOPRIVACY/ONTOPRIVACY.md`](./ONTOPRIVACY/ONTOPRIVACY.md).
+3. Para examinar o modelo, acesse [`ONTOPRIVACY/01_MODELO/`](./ONTOPRIVACY/01_MODELO/).
+4. Para estudar SABiO, UFO e OntoUML, acesse [`ONTOPRIVACY/02_METODOLOGIA/`](./ONTOPRIVACY/02_METODOLOGIA/).
 5. Para reproduzir o Estudo I, acesse [`ANOTACAO_SEMANTICA/EstudoI/`](./ANOTACAO_SEMANTICA/EstudoI/).
 6. Para examinar o Estudo II, acesse [`GERPD/EstudoII/`](./GERPD/EstudoII/).
 
@@ -226,7 +226,7 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 **OntoPrivacy: uma Ontologia de Domínio para enriquecimento semântico de artefatos de Engenharia de Software**  
 OntoPrivacy · Anotação Semântica · GERP
 
-*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*  
+`*Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*`  
 
 <small>*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*</small>  
 <small>*Instituto Federal do Espírito Santo (IFES), Campus Serra*</small>
