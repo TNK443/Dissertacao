@@ -101,17 +101,17 @@ flowchart LR
     %% Estilização visual dos Agrupamentos (Subgraphs)
     %% rx:10,ry:10 arredondam os cantos da caixa principal
     %% F1 - Fundo verde super claro, borda arredondada verde média
-    style F1 fill:#F1F8E9,stroke:#81C784,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style F1 fill:#F1F8E9,stroke:#81C784,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
     %% F2 - Fundo azul super claro, borda arredondada azul média
-    style F2 fill:#E3F2FD,stroke:#64B5F6,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style F2 fill:#E3F2FD,stroke:#64B5F6,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
     %% F3 - Fundo roxo super claro, borda arredondada roxa média
-    style F3 fill:#F3E5F5,stroke:#BA68C8,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style F3 fill:#F3E5F5,stroke:#BA68C8,stroke-width:3px,color:#1A1A1A,stroke-dasharray: 5 5,rx:10,ry:10
 ```
 
 | 🧩 Artefato | Papel na Dissertação | Base Ontológica | Aplicação | 📂 Diretório |
 | :---: | :--- | :---: | :--- | :--- |
 | <small>**OntoPrivacy**</small> | <small>Seção 3.1 / Ontologia de Referência de Domínio (OE01)</small> | <small>Versão Conceitual</small> | <small>- Anotação Semântica<br>- GERPD</small> | [`/ONTOPRIVACY`](./ONTOPRIVACY/) |
-| <small>**Anotação Semântica**</small> | <small>Seção 3.2 / OE02(a)</small> | <small>OntoPrivacy</small> | <small>Estudo I: API Pix (OE03)</small> | [`/ANOTACAO_SEMANTICA`](./ANOTACAO_SEMANTICA/) |
+| <small>**Anotação Semântica**</small> | <small>Seção 3.2 / OE02(a)</small> | <small>OntoPrivacy</small> | <small>Estudo I: API Pix (OE03)</small> | [<small>`/ANOTACAO_SEMANTICA`</small>](./ANOTACAO_SEMANTICA/) |
 | <small>**GERPD v1.0**</small> | <small>Seção 3.3 / OE02(b)</small> | <small>OntoPrivacy</small> | <small>Estudo II: Tibico + ChatGPT (OE04)</small> | [`/GERPD`](./GERPD/) |
 
 > [!NOTE]
@@ -228,7 +228,7 @@ OntoPrivacy · Anotação Semântica · GERP
 
 *Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.*  
 
-*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*  
-*Instituto Federal do Espírito Santo (IFES), Campus Serra*
+<small>*Dissertação apresentada ao Programa de Pós-Graduação em Computação Aplicada (PPCOMP)*</small>  
+<small>*Instituto Federal do Espírito Santo (IFES), Campus Serra*</small>
 
 </div>
