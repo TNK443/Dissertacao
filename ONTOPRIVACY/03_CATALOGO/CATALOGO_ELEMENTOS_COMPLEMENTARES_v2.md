@@ -1,4 +1,4 @@
-# Elementos Complementares do Catálogo — OntoPrivacy v2
+# Elementos Complementares do Catálogo - OntoPrivacy v2
 
 ## Conjuntos de generalização
 
@@ -24,7 +24,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ATT01 | Finalidade | descrição | string | 1 | Expressão textual obrigatória e suficientemente individualizada do propósito para o qual o TDP é realizado. | OntoPrivacy v2; LGPD, art. 6º, I | QC-P5; QC-P6 | Registrado no ASTA; não exibido no PNG por decisão de apresentação. |
 
-## Questões provisórias utilizadas apenas para indexação
+## Questões utilizadas apenas para indexação
 
 | Código | Tema |
 | --- | --- |
