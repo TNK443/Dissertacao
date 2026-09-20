@@ -17,7 +17,7 @@
 
 ## 📌 Sobre a OntoPrivacy
 
-A **OntoPrivacy** é uma ontologia de referência de domínio, em nível conceitual, destinada a representar um núcleo selecionado de conceitos relacionados à **privacidade de dados pessoais**. A ontologia é fundamentada principalmente na **Lei Geral de Proteção de Dados Pessoais (LGPD)** e na **ABNT NBR ISO/IEC 29100:2020**, utiliza o **SABiO** como orientação metodológica, adota a **Unified Foundational Ontology (UFO)** como fundamentação ontológica e é representada em **OntoUML**.
+A **OntoPrivacy** é uma **ontologia de referência de domínio**, em nível conceitual, destinada a representar um núcleo selecionado de conceitos relacionados à **privacidade de dados pessoais**. A ontologia é fundamentada principalmente na **Lei Geral de Proteção de Dados Pessoais (LGPD)** e na **ABNT NBR ISO/IEC 29100:2020**, utiliza o **SABiO** como orientação metodológica, adota a **Unified Foundational Ontology (UFO)** como fundamentação ontológica e é representada em **OntoUML**.
 
 Seu propósito é fornecer uma conceituação compartilhada para apoiar:
 
@@ -90,6 +90,73 @@ flowchart LR
     F --> C
 ```
 
+```mermaid
+flowchart LR
+
+    classDef dado fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#1A1A1A;
+    classDef processo fill:#FFF3E0,stroke:#E65100,stroke-width:2px,color:#1A1A1A;
+    classDef ator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
+    classDef regra fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1A1A1A;
+    classDef relator fill:#FFEBEE,stroke:#C62828,stroke-width:2px,color:#1A1A1A;
+
+    subgraph G1["<br><b>Domínio do Dado e Titular</b><br>&nbsp;"]
+        direction TB
+        D("fa:fa-database <b>Dado</b>\n<i>«kind»</i>"):::dado
+        DP("fa:fa-id-card <b>Dado Pessoal</b>\n<i>«subkind»</i>"):::dado
+        I("fa:fa-fingerprint <b>Identificabilidade</b>\n<i>«relator»</i>"):::relator
+        T("fa:fa-user <b>Titular de DP</b>\n<i>«role»</i>"):::ator
+    end
+
+    subgraph G3["<br><b>Agentes de Tratamento</b><br>&nbsp;"]
+        direction TB
+        P("fa:fa-users <b>Agentes</b>\n<i>«category»</i>"):::ator
+        CTRL("fa:fa-building <b>Controlador</b>\n<i>«role»</i>"):::ator
+        OPR("fa:fa-briefcase <b>Operador</b>\n<i>«role»</i>"):::ator
+    end
+
+    subgraph G2["<br><b>Processamento</b><br>&nbsp;"]
+        direction TB
+        TDP("fa:fa-cogs <b>Tratamento de DP</b>\n<i>«relator»</i>"):::relator
+        O("fa:fa-list-ul <b>Operações</b>\n<i>«event»</i>"):::processo
+        F("fa:fa-bullseye <b>Finalidade</b>\n<i>«mode»</i>"):::regra
+    end
+
+    subgraph G4["<br><b>Legitimidade</b><br>&nbsp;"]
+        direction TB
+        BL("fa:fa-balance-scale <b>Base Legal</b>\n<i>«category»</i>"):::regra
+        C("fa:fa-handshake <b>Consentimento</b>\n<i>«relator»</i>"):::relator
+    end
+
+    %% Eixo Dado -> Titular
+    D -->|especializa| DP
+    DP -->|possibilita| I
+    I -->|vincula-se ao| T
+    
+    %% Eixo Agentes
+    CTRL -.->|é um| P
+    OPR -.->|é um| P
+    P -->|realizam| TDP
+    
+    %% Eixo Tratamento
+    DP -->|é alvo do| TDP
+    O -->|compõem o| TDP
+    TDP -->|requer| F
+    
+    %% Eixo Base Legal / Consentimento
+    TDP -->|fundamenta-se em| BL
+    C -.->|é tipo de| BL
+    
+    T -->|concede| C
+    CTRL -->|coleta / gerencia| C
+    F -->|limita o escopo do| C
+
+    %% ESTILO DAS CAIXAS (SUBGRAPHS)
+    style G1 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style G2 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style G3 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    style G4 fill:#fcfcfc,stroke:#B0BEC5,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+```
+
 ### 1. Identificabilidade
 
 Explica por que um `Dado` desempenha o papel de `Dado Pessoal` e a qual `Titular de DP` ele se refere. Pode ser **Direta** ou **Indireta**.
@@ -116,7 +183,6 @@ ONTOPRIVACY/
 ├── CHANGELOG.md
 ├── 01_MODELO/
 │   ├── README.md
-│   ├── OntoPrivacy_v2.asta
 │   └── OntoPrivacy_v2.png
 ├── 02_METODOLOGIA/
 │   ├── README.md
@@ -167,15 +233,15 @@ ONTOPRIVACY/
 
 ## ✅ Questões de Competência
 
-| QC | Formulação objetiva |
-|---|---|
-| **QC1** | Quais dados são pessoais, sensíveis, pseudonimizados ou anonimizados, e em quais coleções estão organizados? |
-| **QC2** | A quem cada dado pessoal se refere e como ocorre a identificação: direta ou indireta? |
-| **QC3** | Quem participa do tratamento e qual papel desempenha? |
-| **QC4** | Quais operações de tratamento são realizadas sobre os dados pessoais? |
-| **QC5** | Para qual finalidade o tratamento é realizado, quem a define e a quem é informada? |
-| **QC6** | Quem consente com qual tratamento, perante qual controlador e para quais finalidades? |
-| **QC7** | Que dados resultam da anonimização ou pseudonimização e qual condição de identificação permanece? |
+| QC | Questões de Competência | Dimensão |
+|:---:|---|:---:|
+| **QC1** | Quais dados são pessoais, sensíveis, pseudonimizados ou anonimizados? | Dados e Classificação |
+| **QC2** | A quem cada dado pessoal se refere e como ocorre a identificação: direta ou indireta? | Titular e Identificabilidade |
+| **QC3** | Quem participa do tratamento e qual papel desempenha? | Participantes e Papéis |
+| **QC4** | Quais operações de tratamento são realizadas sobre os dados pessoais? | Tratamento, Dados e Operações |
+| **QC5** | Para qual finalidade o tratamento é realizado, quem a define e a quem é informada? | Finalidade e Responsabilidade |
+| **QC6** | Quem consente com qual tratamento, perante qual controlador e para quais finalidades? | Consentimento |
+| **QC7** | Que dados resultam da anonimização ou pseudonimização e qual condição de identificação permanece? | Operação e condições resultantes |
 
 As versões formais e o mapeamento completo estão em [`04_VALIDACAO/`](./04_VALIDACAO/).
 
@@ -202,12 +268,12 @@ O resultado indica que as sete QCs são conceitualmente respondíveis. Essa aval
 flowchart TD
     V1["OntoPrivacy v1"] --> AS["ANOTACAO_SEMANTICA"]
     V1 --> GERPD["GERPD v1.0"]
-    AS --> EI["Estudo I — API Pix"]
-    GERPD --> EII["Estudo II — Tibico"]
-    V1 -->|evolução| V2["OntoPrivacy v2 — versão final"]
+    AS --> EI["Estudo I: API Pix"]
+    GERPD --> EII["Estudo II: Tibico"]
+    V1 -->|evolução| V2["OntoPrivacy v2 (Versão Final)"]
 ```
 
-A pasta `OntoPrivacy/` documenta a versão final. As aplicações históricas permanecem nos diretórios [`../ANOTACAO_SEMANTICA/`](../ANOTACAO_SEMANTICA/) e [`../GERPD/`](../GERPD/).
+A pasta `ONTOPRIVACY/` documenta a versão final. As aplicações históricas permanecem nos diretórios [`../ANOTACAO_SEMANTICA/`](../ANOTACAO_SEMANTICA/) e [`../GERPD/`](../GERPD/).
 
 ---
 
@@ -234,6 +300,6 @@ MORI JUNIOR, D.; NARDI, J. C.; RUY, F. B.; TEIXEIRA, G. F. **Apoio na adoção d
 **OntoPrivacy · Ontologia de Privacidade de Dados**  
 **Conceitos · Privacidade de Dados · LGPD · ISO/IEC 29100 · Engenharia de Software**
 
-*Material complementar de pesquisa acadêmica — versão 2.0, agosto de 2026.*
+*`Material complementar de pesquisa acadêmica | versão 1.0, agosto de 2026.`*
 
 </div>
