@@ -49,7 +49,7 @@ O objetivo deste repositório é promover a **transparência, reprodutibilidade 
 ```mermaid
 ---
 config:
-    theme: redux-color
+    theme: neutral
     look: neo
 ---
 flowchart LR
