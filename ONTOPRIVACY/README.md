@@ -80,18 +80,16 @@ A leitura da OntoPrivacy é organizada por três `relators` centrais:
 config:
     theme: neutral
     look: neo
-    layout: elk
 ---
 flowchart
-    %% Laranja: Agentes (Pessoas/Organizações)
     classDef relator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
     classDef geral   fill:#F8F9FA,stroke:#1A1A1A,stroke-width:2px,color:#1A1A1A;
 
     D["Dado"]:::geral --> DP["Dado Pessoal"]:::geral
     DP --> I["<i>«relator»</i>\n<b>Identificabilidade<b>"]:::relator
     I --> T["Titular de DP"]:::geral
-    DP --> TDP["<i>«relator»</i>\n<b>Tratamento de Dados Pessoais<b>"]:::relator
-    P["Partes interessadas\ne agentes"]:::geral --> TDP
+    DP --> TDP["<i>«relator»</i>\n<b>Tratamento de\n Dados Pessoais<b>"]:::relator
+    P["Partes Interessadas e\n Agentes de Tratamento"]:::geral --> TDP
     O["Operações de TDP"]:::geral --> TDP
     F["<i>«mode»</i>\nFinalidade"]:::geral --> TDP
     T --> C["<i>«relator»</i>\n<b>Consentimento<b>"]:::relator
@@ -105,7 +103,6 @@ flowchart
 config:
     theme: neutral
     look: neo
-    layout: elk
 ---
 flowchart LR
     %% --------------------------------------------------------
@@ -141,12 +138,11 @@ flowchart LR
         T("<i>«role»</i>\n<b>Titular de DP</b>"):::ator
         
         %% Conexões Internas do G1
-        D --> DP
+        D  --> DP
         DP -->|refere-se ao| T
         DP -->|possibilita a| I
-        I -->|identifica| T
-        I -->|pode ser| IDIR
-        I -->|pode ser| IIND
+        I  -->|identifica| T
+        I  -->|pode ser| IDIR & IIND
     end
 
     %% --------------------------------------------------------
@@ -162,12 +158,9 @@ flowchart LR
         F("<i>«mode»</i>\n<b>Finalidade</b>"):::mode
         
         %% Conexões Internas do G2
-        TDP -->|é / abrange| CO --> |é composto por| O
+        TDP -->|é / abrange| CO -->|é composto por| O
         TDP -->|possui| F
-        TDP --> |envolve| P
-        P -----> |pode  ser| OPR & CTRL
-        P ~~~ CTRL
-
+        TDP -->|envolve| P -->|pode  ser| OPR & CTRL 
     end
 
     %% --------------------------------------------------------
@@ -183,11 +176,12 @@ flowchart LR
     %% --------------------------------------------------------    
     %% Ligação Dado Pessoal -> TDP
     DP --> TDP
+    G3 ~~~ G2
 
     %% Ligações do Consentimento
     C -->|é dirigido ao| CTRL
     C -->|é relativo ao| TDP
-    C -->|determina a| F ~~~ C
+    C -->|determina a| F
 
     %% --------------------------------------------------------
     %% ESTILIZAÇÃO DAS CAIXAS (CLEAN DESIGN)
