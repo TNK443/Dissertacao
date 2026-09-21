@@ -92,8 +92,8 @@ flowchart LR
     end
 
     %% CONEXÕES COM RÓTULOS
-    OP0 -->|Utilizada na| AS
-    OP0 -->|Integrada ao| G
+    OP0 --->|Utilizada na| AS
+    OP0 --->|Integrada ao| G
     
 
     AS -->|Validada no| E1
@@ -101,7 +101,7 @@ flowchart LR
     
     OP1 -->|Evolução\nConceitual| OP2
     OP2 -->|Resulta em| DOC
-    OP0 <--> F1
+    OP0 --- F1
 
     %% Estilização visual dos Agrupamentos (Subgraphs)
     %% rx:10,ry:10 arredondam os cantos da caixa principal
