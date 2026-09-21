@@ -47,6 +47,11 @@ O objetivo deste repositório é promover a **transparência, reprodutibilidade 
 ## 🧭 Visão geral da pesquisa e política de versões
 
 ```mermaid
+---
+config:
+    theme: redux-color
+    look: neo
+---
 flowchart LR
     %% Definição de estilos (ClassDef)
     %% Ontologia: Tons de Verde
