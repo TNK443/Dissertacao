@@ -76,6 +76,12 @@ Leia a política completa em [`VERSIONAMENTO.md`](./VERSIONAMENTO.md).
 A leitura da OntoPrivacy é organizada por três `relators` centrais:
 
 ```mermaid
+---
+config:
+    theme: neutral
+    look: neo
+    layout: elk
+---
 flowchart
     %% Laranja: Agentes (Pessoas/Organizações)
     classDef relator fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
@@ -97,7 +103,7 @@ flowchart
 ```mermaid
 ---
 config:
-    theme: redux-color
+    theme: neutral
     look: neo
     layout: elk
 ---
@@ -135,38 +141,33 @@ flowchart LR
         T("<i>«role»</i>\n<b>Titular de DP</b>"):::ator
         
         %% Conexões Internas do G1
-        D -->DP
+        D --> DP
+        DP -->|refere-se ao| T
         DP -->|possibilita a| I
+        I -->|identifica| T
         I -->|pode ser| IDIR
         I -->|pode ser| IIND
-        I -->|refere-se ao| T
     end
 
     %% --------------------------------------------------------
     %% AGRUPAMENTO 2: TRATAMENTO DE DADOS PESSOAIS
     %% --------------------------------------------------------
     subgraph G2 ["<b>2. TRATAMENTO DE DADOS PESSOAIS (TDP)</b>&nbsp;"]
-        TDP("<i>«relator»</i>\n<b>Tratamento de Dados Pessoais (TDP)</b>"):::relator
-        
+        TDP("<i>«relator»</i>\n<b>Tratamento de Dados Pessoais (TDP)</b>"):::relator        
         O("<i>«subkind»</i>\n<b>Operação de TDP</b>"):::subkind
         CO("<i>«subkind»</i>\n<b>Conj. de Operações</b>"):::subkind
-        
-        P("<i>«rolemixin»</i>\n<b>Partes e Agentes</b>"):::ator
+        P("<i>«rolemixin»</i>\n<b>Parte Interessada ou \nAgente de Tratamento</b>"):::ator
         CTRL("<i>«rolemixin»</i>\n<b>Controlador</b>"):::ator
         OPR("<i>«rolemixin»</i>\n<b>Operador</b>"):::ator
-        
         F("<i>«mode»</i>\n<b>Finalidade</b>"):::mode
         
         %% Conexões Internas do G2
-        O -->|compõe um| CO
-        O -->|é abrangida pelo| TDP
-        CO -->|é abrangido pelo| TDP
-        
-        CTRL -.->|é tipo de| P
-        OPR -.->|é tipo de| P
-        P -->|envolvidas no| TDP
-        
-        TDP -->|possui uma ou mais| F
+        TDP -->|é / abrange| CO --> |é composto por| O
+        TDP -->|possui| F
+        TDP --> |envolve| P
+        P -----> |pode  ser| OPR & CTRL
+        P ~~~ CTRL
+
     end
 
     %% --------------------------------------------------------
@@ -174,20 +175,19 @@ flowchart LR
     %% --------------------------------------------------------
     subgraph G3 ["<b>3. CONSENTIMENTO</b>&nbsp;"]
         C("<i>«relator»</i>\n<b>Consentimento</b>"):::relator
+        T -->|manifesta o| C
     end
 
     %% --------------------------------------------------------
     %% CONEXÕES ENTRE OS AGRUPAMENTOS (CROSS-LINKS)
-    %% --------------------------------------------------------
-    
+    %% --------------------------------------------------------    
     %% Ligação Dado Pessoal -> TDP
-    DP -->|é abrangido pelo| TDP
-    
+    DP --> TDP
+
     %% Ligações do Consentimento
-    T -->|manifesta o| C
     C -->|é dirigido ao| CTRL
     C -->|é relativo ao| TDP
-    C -->|determina as| F
+    C -->|determina a| F ~~~ C
 
     %% --------------------------------------------------------
     %% ESTILIZAÇÃO DAS CAIXAS (CLEAN DESIGN)
@@ -304,12 +304,21 @@ O resultado indica que as sete QCs são conceitualmente respondíveis. Essa aval
 ## 🔗 Relação com os demais artefatos
 
 ```mermaid
-flowchart TD
-    V1["OntoPrivacy v1"] --> AS["ANOTACAO_SEMANTICA"]
-    V1 --> GERPD["GERPD v1.0"]
-    AS --> EI["Estudo I: API Pix"]
-    GERPD --> EII["Estudo II: Tibico"]
-    V1 -->|evolução| V2["OntoPrivacy v2\n(Versão Final)"]
+---
+config:
+    theme: neutral
+    look:handDrawn
+---
+flowchart
+    classDef v2 fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
+    classDef v1 fill:#F8F9FA,stroke:#1A1A1A,stroke-width:2px,color:#1A1A1A;
+
+    V1["OntoPrivacy v1"]:::v1
+    V2["OntoPrivacy v2\n(Versão Final)"]:::v2
+
+    V1 --> GERPD["GERPD v1"] --> EII["Estudo II: Tibico"]
+    V1 --> AS["ANOTACAO_SEMANTICA"] --> EI["Estudo I: API Pix"]
+    V2 -.- V1
 ```
 
 A pasta `ONTOPRIVACY/` documenta a versão final. As aplicações históricas permanecem nos diretórios [`../ANOTACAO_SEMANTICA/`](../ANOTACAO_SEMANTICA/) e [`../GERPD/`](../GERPD/).
