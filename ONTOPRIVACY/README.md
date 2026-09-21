@@ -95,6 +95,12 @@ flowchart
 ```
 
 ```mermaid
+---
+config:
+    theme: redux-color
+    look: neo
+    layout: elk
+---
 flowchart LR
     %% --------------------------------------------------------
     %% PALETA DE CORES LÓGICA E ELEGANTE (MATERIAL DESIGN)
