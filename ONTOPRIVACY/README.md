@@ -306,8 +306,8 @@ O resultado indica que as sete QCs são conceitualmente respondíveis. Essa aval
 ```mermaid
 ---
 config:
+    look: handDrawn
     theme: neutral
-    look:handDrawn
 ---
 flowchart
     classDef v2 fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#1A1A1A;
